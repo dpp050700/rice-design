@@ -1,0 +1,47 @@
+$color-whitee: #ffffff !default;
+$color-black: #000000 !default;
+$color-primary: #2B6BFF !default;
+
+$color-success: #1BA17D !default;
+$color-message: #4D82FF !default;
+$color-fail: #F2242E !default;
+$color-warning: #FF9305 !default;
+
+
+$color-success-light: #77C7B1 !default;
+$color-message-light: #94B4FF !default;
+$color-fail-light: #F8878C !default;
+$color-warning-light: #E69A4E !default;
+
+$color-success-lighter: #EDF8F1 !default;
+$color-message-lighter: #F2F6FF !default;
+$color-fail-lighter: #FEF4F4 !default;
+$color-warning-lighter: #FFF8EB !default;
+
+
+$color-gray-100: #F8FAFD !default;
+$color-gray-200: #F5F7FC !default;
+$color-gray-300: #EBEDF2 !default;
+$color-gray-400: #C3CAD9 !default;
+$color-gray-500: #828999 !default;
+$color-gray-600: #4D5466 !default;
+$color-gray-700: #1F2126 !default;
+
+
+$font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
+$font-family-base:            $font-family-sans-serif !default;
+
+$fontsize-large-xxxx : 24px;
+$fontsize-large-xxx : 22px;
+$fontsize-large-xx : 20px;
+$fontsize-large-x : 19px;
+$fontsize-large : 18px;
+$fontsize-medium-xx : 17px;
+$fontsize-medium-x : 16px;
+$fontsize-medium : 15px;
+$fontsize-small-xx : 14px;
+$fontsize-small-x : 13px;
+$fontsize-small : 12px;
+
+$fontsize-base: $fontsize-small;
