@@ -21,8 +21,8 @@ const Button: React.FC<BaseButtonProps> = (props: BaseButtonProps) => {
     [`btn-${size}`]: size,
     [`btn-plain`]: plain,
     [`btn-plainest`]: plainest,
-    [`btn-${disabled}`]: disabled,
-    [`btn-${round}`]: round
+    [`btn-disabled`]: disabled,
+    [`btn-round`]: round
   })
   return (
     <button className={btnClass}>{children}</button>
