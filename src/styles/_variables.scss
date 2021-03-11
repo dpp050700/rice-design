@@ -1,22 +1,31 @@
-$color-whitee: #ffffff !default;
+$color-white: #ffffff !default;
 $color-black: #000000 !default;
 $color-primary: #2B6BFF !default;
-
 $color-success: #1BA17D !default;
-$color-message: #4D82FF !default;
-$color-fail: #F2242E !default;
-$color-warning: #FF9305 !default;
+$color-info: #909399 !default;
+$color-warning: #e6a23c !default;
+$color-danger: #f56c6c !default;
+
+$color-primary-light-1: mix($color-white, $color-primary, 10%) !default; 
+$color-primary-light-2: mix($color-white, $color-primary, 20%) !default; 
+$color-primary-light-3: mix($color-white, $color-primary, 30%) !default; 
+$color-primary-light-4: mix($color-white, $color-primary, 40%) !default; 
+$color-primary-light-5: mix($color-white, $color-primary, 50%) !default;
+$color-primary-light-6: mix($color-white, $color-primary, 60%) !default; 
+$color-primary-light-7: mix($color-white, $color-primary, 70%) !default; 
+$color-primary-light-8: mix($color-white, $color-primary, 80%) !default;
+$color-primary-light-9: mix($color-white, $color-primary, 90%) !default;
 
 
-$color-success-light: #77C7B1 !default;
-$color-message-light: #94B4FF !default;
-$color-fail-light: #F8878C !default;
-$color-warning-light: #E69A4E !default;
+// $color-success-light: #77C7B1 !default;
+// $color-message-light: #94B4FF !default;
+// $color-fail-light: #F8878C !default;
+// $color-warning-light: #E69A4E !default;
 
-$color-success-lighter: #EDF8F1 !default;
-$color-message-lighter: #F2F6FF !default;
-$color-fail-lighter: #FEF4F4 !default;
-$color-warning-lighter: #FFF8EB !default;
+// $color-success-lighter: #EDF8F1 !default;
+// $color-message-lighter: #F2F6FF !default;
+// $color-fail-lighter: #FEF4F4 !default;
+// $color-warning-lighter: #FFF8EB !default;
 
 
 $color-gray-100: #F8FAFD !default;
@@ -31,8 +40,9 @@ $color-gray-700: #1F2126 !default;
 $font-family-sans-serif:      -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 $font-family-base:            $font-family-sans-serif !default;
+$font-color: #606266;
 
-$fontsize-large-xxxx : 24px;
+$fontsize-default : 14px;
 $fontsize-large-xxx : 22px;
 $fontsize-large-xx : 20px;
 $fontsize-large-x : 19px;
@@ -45,3 +55,73 @@ $fontsize-small-x : 13px;
 $fontsize-small : 12px;
 
 $fontsize-base: $fontsize-small;
+
+
+$border-color-default: $color-gray-400;
+
+
+
+// button
+$btn-font-weight: 500;
+$btn-line-height: 1;
+
+$btn-padding-default-x: 20px;
+$btn-padding-default-y: 12px;
+$btn-padding-medium-x: 20px;
+$btn-padding-medium-y: 10px;
+$btn-padding-small-x: 15px;
+$btn-padding-small-y: 8px;
+$btn-padding-mini-x: 15px;
+$btn-padding-mini-y: 6px;
+
+$btn-font-size-default: 14px;
+$btn-font-size-medium: 14px;
+$btn-font-size-small: 12px;
+$btn-font-size-mini: 12px;
+
+$btn-border-radius-default: 4px;
+$btn-border-radius-medium: 4px;
+$btn-border-radius-small: 2px;
+$btn-border-radius-mini: 2px;
+
+$btn-background-default: $color-white;
+$btn-background-primary: $color-primary;
+$btn-background-success: $color-success;
+$btn-background-info: $color-info;
+$btn-background-warning: $color-warning;
+$btn-background-danger: $color-danger;
+
+$btn-hover-background-default: $color-primary-light-9;
+$btn-hover-background-primary: $color-primary;
+$btn-hover-background-success: $color-success;
+$btn-hover-background-info: $color-info;
+$btn-hover-background-warning: $color-warning;
+$btn-hover-background-danger: $color-danger;
+
+$btn-color-default: $font-color;
+$btn-color-primary: $color-white;
+$btn-color-success: $color-white;
+$btn-color-info: $color-white;
+$btn-color-warning: $color-white;
+$btn-color-danger: $color-white;
+
+$btn-hover-color-default: $color-primary;
+$btn-hover-color-primary: $color-white;
+$btn-hover-color-success: $color-white;
+$btn-hover-color-info: $color-white;
+$btn-hover-color-warning: $color-white;
+$btn-hover-color-danger: $color-white;
+
+$btn-border-default: $border-color-default;
+$btn-border-primary: $color-primary;
+$btn-border-success: $color-success;
+$btn-border-info: $color-info;
+$btn-border-warning: $color-warning;
+$btn-border-danger: $color-danger;
+
+$btn-hover-border-default: $color-primary-light-7;
+$btn-hover-border-primary: $color-primary;
+$btn-hover-border-success: $color-success;
+$btn-hover-border-info: $color-info;
+$btn-hover-border-warning: $color-warning;
+$btn-hover-border-danger: $color-danger;

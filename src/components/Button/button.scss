@@ -1,0 +1,111 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  line-height: $btn-line-height;
+  font-weight: $btn-font-weight;
+  white-space: nowrap;
+  text-align: center;
+  background-image: none;
+  cursor: pointer;
+  user-select: none;
+  touch-action: manipulation;
+  outline: none;
+  background: none;
+  border: 1px solid #cccccc;
+  @include button-size($btn-padding-default-y, $btn-padding-default-x, $btn-font-size-default, $btn-border-radius-default);
+  @include button-style(
+    $btn-background-default,
+    $btn-color-default, 
+    $btn-border-default, 
+    $btn-hover-background-default,
+     $btn-hover-color-default,
+     $btn-hover-border-default
+  )
+}
+
+.btn-medium {
+  @include button-size($btn-padding-medium-y, $btn-padding-medium-x, $btn-font-size-medium, $btn-border-radius-medium)
+}
+
+.btn-small {
+  @include button-size($btn-padding-small-y, $btn-padding-small-x, $btn-font-size-small, $btn-border-radius-small)
+}
+
+.btn-mini {
+  @include button-size($btn-padding-mini-y, $btn-padding-mini-x, $btn-font-size-mini, $btn-border-radius-mini)
+}
+
+.btn-primary {
+  @include button-style(
+    $btn-background-primary,
+    $btn-color-primary, 
+    $btn-border-primary, 
+    $btn-hover-background-primary,
+    $btn-hover-color-primary,
+    $btn-hover-border-primary
+  );
+  &.btn-plain{
+    @include button-style(
+      $color-white,
+      $color-primary, 
+      $color-primary, 
+      $btn-hover-background-primary,
+      $btn-hover-color-primary,
+      $btn-hover-border-primary
+    );
+  }
+  &.btn-plainest{
+    @include button-style(
+      $color-white,
+      $btn-border-default, 
+      $btn-border-default, 
+      $color-white,
+      $color-primary,
+      $btn-border-default,
+    );
+  }
+}
+
+.btn-success {
+  @include button-style(
+    $btn-background-success,
+    $btn-color-success, 
+    $btn-border-success, 
+    $btn-hover-background-success,
+    $btn-hover-color-success,
+    $btn-hover-border-success
+  )
+}
+
+.btn-warning {
+  @include button-style(
+    $btn-background-warning,
+    $btn-color-warning, 
+    $btn-border-warning, 
+    $btn-hover-background-warning,
+    $btn-hover-color-warning,
+    $btn-hover-border-warning
+  )
+}
+
+.btn-info {
+  @include button-style(
+    $btn-background-info,
+    $btn-color-info, 
+    $btn-border-info, 
+    $btn-hover-background-info,
+    $btn-hover-color-info,
+    $btn-hover-border-info
+  )
+}
+
+.btn-danger {
+  @include button-style(
+    $btn-background-danger,
+    $btn-color-danger, 
+    $btn-border-danger, 
+    $btn-hover-background-danger,
+    $btn-hover-color-danger,
+    $btn-hover-border-danger
+  )
+}
