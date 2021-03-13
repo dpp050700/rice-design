@@ -1,4 +1,6 @@
-.btn {
+$namespace: "#{$class-prefix}-button";
+
+.#{$namespace} {
   position: relative;
   display: inline-block;
   line-height: $btn-line-height;
@@ -11,53 +13,62 @@
   touch-action: manipulation;
   outline: none;
   background: none;
-  border: 1px solid #cccccc;
+  border: 1px solid $btn-border-default;
   @include button-size($btn-padding-default-y, $btn-padding-default-x, $btn-font-size-default, $btn-border-radius-default);
   @include button-style(
     $btn-background-default,
     $btn-color-default, 
     $btn-border-default, 
     $btn-hover-background-default,
-     $btn-hover-color-default,
-     $btn-hover-border-default
-  )
+    $btn-hover-color-default,
+    $btn-hover-border-default
+  );
+  &+&{
+    margin-left: 10px
+  }
+  &.is-disabled,
+  &[disabled] {
+    cursor: not-allowed;
+    opacity: $btn-disabled-opacity;
+    box-shadow: none;
+    > * {
+      pointer-events: none;
+    }
+  }
 }
 
-.btn-medium {
+.#{$namespace}--medium {
   @include button-size($btn-padding-medium-y, $btn-padding-medium-x, $btn-font-size-medium, $btn-border-radius-medium)
 }
 
-.btn-small {
+.#{$namespace}--small {
   @include button-size($btn-padding-small-y, $btn-padding-small-x, $btn-font-size-small, $btn-border-radius-small)
 }
 
-.btn-mini {
+.#{$namespace}--mini {
   @include button-size($btn-padding-mini-y, $btn-padding-mini-x, $btn-font-size-mini, $btn-border-radius-mini)
 }
 
-.btn-primary {
+.#{$namespace}--primary {
   @include button-style(
     $btn-background-primary,
     $btn-color-primary, 
-    $btn-border-primary, 
-    $btn-hover-background-primary,
-    $btn-hover-color-primary,
-    $btn-hover-border-primary
+    $btn-border-primary
   );
-  &.btn-plain{
+  &.is-plain{
     @include button-style(
       $color-white,
       $color-primary, 
-      $color-primary, 
+      $btn-border-primary, 
       $btn-hover-background-primary,
       $btn-hover-color-primary,
       $btn-hover-border-primary
     );
   }
-  &.btn-plainest{
+  &.is-plainest{
     @include button-style(
       $color-white,
-      $btn-border-default, 
+      $btn-color-default, 
       $btn-border-default, 
       $color-white,
       $color-primary,
@@ -66,46 +77,114 @@
   }
 }
 
-.btn-success {
+.#{$namespace}--success {
   @include button-style(
     $btn-background-success,
     $btn-color-success, 
-    $btn-border-success, 
-    $btn-hover-background-success,
-    $btn-hover-color-success,
-    $btn-hover-border-success
-  )
+    $btn-border-success
+  );
+  &.is-plain{
+    @include button-style(
+      $color-white,
+      $color-success, 
+      $btn-border-success, 
+      $btn-hover-background-success,
+      $btn-hover-color-success,
+      $btn-hover-border-success
+    );
+  }
+  &.is-plainest{
+    @include button-style(
+      $color-white,
+      $btn-color-default, 
+      $btn-border-default, 
+      $color-white,
+      $color-success,
+      $btn-border-default,
+    );
+  }
 }
 
-.btn-warning {
+.#{$namespace}--warning {
   @include button-style(
     $btn-background-warning,
     $btn-color-warning, 
-    $btn-border-warning, 
-    $btn-hover-background-warning,
-    $btn-hover-color-warning,
-    $btn-hover-border-warning
-  )
+    $btn-border-warning
+  );
+  &.is-plain{
+    @include button-style(
+      $color-white,
+      $color-warning, 
+      $btn-border-warning, 
+      $btn-hover-background-warning,
+      $btn-hover-color-warning,
+      $btn-hover-border-warning
+    );
+  }
+  &.is-plainest{
+    @include button-style(
+      $color-white,
+      $btn-color-default, 
+      $btn-border-default, 
+      $color-white,
+      $color-warning,
+      $btn-border-default,
+    );
+  }
 }
 
-.btn-info {
+.#{$namespace}--info {
   @include button-style(
     $btn-background-info,
     $btn-color-info, 
-    $btn-border-info, 
-    $btn-hover-background-info,
-    $btn-hover-color-info,
-    $btn-hover-border-info
-  )
+    $btn-border-info
+  );
+  &.is-plain{
+    @include button-style(
+      $color-white,
+      $color-info, 
+      $btn-border-info, 
+      $btn-hover-background-info,
+      $btn-hover-color-info,
+      $btn-hover-border-info
+    );
+  }
+  &.is-plainest{
+    @include button-style(
+      $color-white,
+      $btn-color-default, 
+      $btn-border-default, 
+      $color-white,
+      $color-info,
+      $btn-border-default,
+    );
+  }
 }
 
-.btn-danger {
+.#{$namespace}--danger {
   @include button-style(
     $btn-background-danger,
     $btn-color-danger, 
-    $btn-border-danger, 
-    $btn-hover-background-danger,
-    $btn-hover-color-danger,
-    $btn-hover-border-danger
-  )
+    $btn-border-danger
+  );
+  &.is-plain{
+    @include button-style(
+      $color-white,
+      $color-danger, 
+      $btn-border-danger, 
+      $btn-hover-background-danger,
+      $btn-hover-color-danger,
+      $btn-hover-border-danger
+    );
+  }
+  &.is-plainest{
+    @include button-style(
+      $color-white,
+      $btn-color-default, 
+      $btn-border-default, 
+      $color-white,
+      $color-danger,
+      $btn-border-default,
+    );
+  }
 }

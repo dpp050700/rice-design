@@ -1,3 +1,5 @@
+$class-prefix: tracy;
+
 $color-white: #ffffff !default;
 $color-black: #000000 !default;
 $color-primary: #2B6BFF !default;
@@ -64,6 +66,7 @@ $border-color-default: $color-gray-400;
 // button
 $btn-font-weight: 500;
 $btn-line-height: 1;
+$btn-disabled-opacity:0.65 !default;
 
 $btn-padding-default-x: 20px;
 $btn-padding-default-y: 12px;

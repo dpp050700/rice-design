@@ -2,15 +2,22 @@
   padding: $btn-padding-y $btn-padding-x;
   font-size: $btn-font-size;
   border-radius: $btn-border-radius;
+  &.is-round {
+    border-radius: $btn-padding-x;
+  }
+  &.is-circle {
+    border-radius: 50%;
+    padding: $btn-padding-y;
+  }
 }
 
 @mixin button-style(
   $background-color, 
   $color, 
   $border-color,
-  $hover-background-color,
-  $hover-color,
-  $hover-border-color
+  $hover-background-color: lighten($background-color, 7.5%),
+  $hover-color: $color,
+  $hover-border-color: lighten($border-color, 10%)
 ) {
   color: $color;
   background-color: $background-color;
@@ -25,5 +32,11 @@
     color: $hover-color;
     background-color: $hover-background-color;
     border-color: $hover-border-color;
+  }
+  &:disabled,
+  &.is-disabled {
+    color: $color;
+    background: $background-color;
+    border-color: $border-color;    
   }
 }
