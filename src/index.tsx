@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
+// eslint-disable-next-line import/no-unresolved
 import App from './App';
+// eslint-disable-next-line import/no-unresolved
 import reportWebVitals from './reportWebVitals';
 // https://dog.ceo/api/breeds/image/random
 
@@ -9,7 +11,7 @@ ReactDOM.render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById('root'),
 );
 
 // If you want to start measuring performance in your app, pass a function
