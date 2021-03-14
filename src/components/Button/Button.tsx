@@ -21,12 +21,6 @@ interface BaseButtonProps {
   children?: React.ReactNode;
 }
 
-// export type NativeButtonProps = {
-//   htmlType?: ButtonHTMLType;
-//   onClick?: React.MouseEventHandler<HTMLElement>;
-// } & BaseButtonProps &
-//   Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
-
 type NativeButtonProps = { onClick?: React.MouseEventHandler<HTMLElement> } & BaseButtonProps &
   Omit<React.ButtonHTMLAttributes<any>, 'type' | 'onClick'>;
 export type ButtonProps = Partial<NativeButtonProps>;

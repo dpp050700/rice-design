@@ -1,9 +1,21 @@
 import React from 'react';
 import Button from './components/Button/Button';
+import Icon from './components/Icon/Icon';
+import icons from './icon.json';
 
 const App: React.FC = () => {
   return (
     <div>
+      {icons.map(item => (
+        <Icon
+          name={item}
+          key={item}
+          onClick={() => {
+            console.log(123);
+          }}
+          style={{ cursor: 'pointer', fontSize: '20px' }}
+        />
+      ))}
       <div>
         <h2>Primary</h2>
         <Button>默认按钮</Button>
