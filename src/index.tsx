@@ -1,9 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './styles/index.scss';
-// eslint-disable-next-line import/no-unresolved
 import App from './App';
-// eslint-disable-next-line import/no-unresolved
 import reportWebVitals from './reportWebVitals';
 // https://dog.ceo/api/breeds/image/random
 

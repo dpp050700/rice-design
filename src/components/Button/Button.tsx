@@ -1,7 +1,6 @@
 import React from 'react';
 import classnames from 'classnames';
 import { tuple } from '../_utils/type';
-// eslint-disable-next-line import/no-unresolved
 import { ConfigContext } from '../config-provider/context';
 
 const ButtonSizes = tuple('default', 'medium', 'small', 'mini');
