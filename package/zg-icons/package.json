@@ -1,6 +1,6 @@
 {
-  "name": "@zg/icons",
-  "version": "0.0.4",
+  "name": "icons",
+  "version": "0.0.1",
   "description": "",
   "main": "./src/config.js",
   "scripts": {

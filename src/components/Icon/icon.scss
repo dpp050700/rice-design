@@ -1,0 +1,20 @@
+$namespace: '#{$class-prefix}-icon';
+.#{$namespace}{
+  color: $font-color;
+}
+
+.#{$namespace}--primary{
+  color: $color-primary;
+}
+.#{$namespace}--success{
+  color: $color-success;
+}
+.#{$namespace}--warning{
+  color: $color-warning;
+}
+.#{$namespace}--danger{
+  color: $color-danger;
+}
+.#{$namespace}--info{
+  color: $color-info;
+}
