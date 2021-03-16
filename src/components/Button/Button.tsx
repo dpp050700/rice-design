@@ -6,7 +6,7 @@ import { ConfigContext } from '../config-provider/context';
 const ButtonSizes = tuple('default', 'medium', 'small', 'mini');
 export type ButtonSize = typeof ButtonSizes[number];
 
-const ButtonTypes = tuple('default', 'primary', 'success', 'warning', 'info', 'danger');
+const ButtonTypes = tuple('default', 'primary', 'success', 'warning', 'info', 'error');
 export type ButtonType = typeof ButtonTypes[number];
 
 interface BaseButtonProps {

@@ -1,0 +1,79 @@
+$namespace: '#{$class-prefix}-alert';
+
+.#{$namespace} {
+  width: 100%;
+  padding: 8px 16px;
+  margin: 0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  opacity: 1;
+  display: flex;
+  align-items: center;
+  transition: opacity .2s;
+  .#{$namespace}__icon{
+    &.is-big{
+      font-size: 28px;
+    }
+  }
+  .#{$namespace}__content{
+    padding: 0 8px;
+    flex: 1;
+    position: relative;
+    .#{$namespace}__description{
+      font-size: 12px;
+      margin-top: 5px;
+    }
+  }
+  .#{$namespace}__close{
+    cursor: pointer;
+    margin-left: 8px;
+    padding: 0;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 12px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    .#{$namespace}__close__icon{
+      transition: all 0.2s;
+      &.is-big{
+        font-size: 28px;
+      }
+      &:hover{
+        transform:rotate(180deg);
+      }
+    }
+  }
+  &.is-light{
+    .#{$namespace}__close{
+      color: rgba(0,0,0,.45);
+    }
+  }
+  &.is-dark{
+    .#{$namespace}__close{
+      color: #fff;
+    }
+  }
+}
+
+.#{$namespace}--primary {
+  @include alert-style($color-primary);
+}
+
+.#{$namespace}--success {
+  @include alert-style($color-success);
+}
+
+.#{$namespace}--warning {
+  @include alert-style($color-warning);
+}
+
+.#{$namespace}--info {
+  @include alert-style($color-info);
+}
+
+.#{$namespace}--error {
+  @include alert-style($color-error);
+}

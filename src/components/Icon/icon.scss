@@ -1,7 +1,7 @@
 $namespace: '#{$class-prefix}-icon';
-.#{$namespace}{
-  color: $font-color;
-}
+// .#{$namespace}{
+//   // color: $font-color;
+// }
 
 .#{$namespace}--primary{
   color: $color-primary;
@@ -12,8 +12,8 @@ $namespace: '#{$class-prefix}-icon';
 .#{$namespace}--warning{
   color: $color-warning;
 }
-.#{$namespace}--danger{
-  color: $color-danger;
+.#{$namespace}--error{
+  color: $color-error;
 }
 .#{$namespace}--info{
   color: $color-info;

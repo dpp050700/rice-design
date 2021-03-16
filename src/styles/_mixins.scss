@@ -40,3 +40,14 @@
     border-color: $border-color;
   }
 }
+
+@mixin alert-style($color) {
+  &.is-light{
+    color: $color;
+    background: mix($color-white, $color, 90%);;
+  }
+  &.is-dark{
+    background: $color;
+    color: #fff;
+  }
+}

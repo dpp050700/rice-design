@@ -68,12 +68,12 @@ const ButtonDeom: React.FC = () => {
         </Button>
       </div>
       <div>
-        <h2>Danger</h2>
-        <Button type="danger">默认按钮</Button>
-        <Button type="danger" plain>
+        <h2>Error</h2>
+        <Button type="error">默认按钮</Button>
+        <Button type="error" plain>
           默认按钮
         </Button>
-        <Button type="danger" plainest>
+        <Button type="error" plainest>
           默认按钮
         </Button>
       </div>
@@ -91,13 +91,13 @@ const ButtonDeom: React.FC = () => {
         <Button type="warning" disabled>
           默认按钮
         </Button>
-        <Button type="danger" disabled>
+        <Button type="error" disabled>
           默认按钮
         </Button>
-        <Button type="danger" plain disabled>
+        <Button type="error" plain disabled>
           默认按钮
         </Button>
-        <Button type="danger" plainest disabled>
+        <Button type="error" plainest disabled>
           默认按钮
         </Button>
       </div>

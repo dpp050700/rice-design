@@ -6,7 +6,7 @@ $color-primary: #2b6bff !default;
 $color-success: #1ba17d !default;
 $color-info: #909399 !default;
 $color-warning: #e6a23c !default;
-$color-danger: #f56c6c !default;
+$color-error: #f56c6c !default;
 
 $color-primary-light-1: mix($color-white, $color-primary, 10%) !default;
 $color-primary-light-2: mix($color-white, $color-primary, 20%) !default;
@@ -89,39 +89,39 @@ $btn-background-primary: $color-primary;
 $btn-background-success: $color-success;
 $btn-background-info: $color-info;
 $btn-background-warning: $color-warning;
-$btn-background-danger: $color-danger;
+$btn-background-error: $color-error;
 
 $btn-hover-background-default: $color-primary-light-9;
 $btn-hover-background-primary: $color-primary;
 $btn-hover-background-success: $color-success;
 $btn-hover-background-info: $color-info;
 $btn-hover-background-warning: $color-warning;
-$btn-hover-background-danger: $color-danger;
+$btn-hover-background-error: $color-error;
 
 $btn-color-default: $font-color;
 $btn-color-primary: $color-white;
 $btn-color-success: $color-white;
 $btn-color-info: $color-white;
 $btn-color-warning: $color-white;
-$btn-color-danger: $color-white;
+$btn-color-error: $color-white;
 
 $btn-hover-color-default: $color-primary;
 $btn-hover-color-primary: $color-white;
 $btn-hover-color-success: $color-white;
 $btn-hover-color-info: $color-white;
 $btn-hover-color-warning: $color-white;
-$btn-hover-color-danger: $color-white;
+$btn-hover-color-error: $color-white;
 
 $btn-border-default: $border-color-default;
 $btn-border-primary: $color-primary;
 $btn-border-success: $color-success;
 $btn-border-info: $color-info;
 $btn-border-warning: $color-warning;
-$btn-border-danger: $color-danger;
+$btn-border-error: $color-error;
 
 $btn-hover-border-default: $color-primary-light-7;
 $btn-hover-border-primary: $color-primary;
 $btn-hover-border-success: $color-success;
 $btn-hover-border-info: $color-info;
 $btn-hover-border-warning: $color-warning;
-$btn-hover-border-danger: $color-danger;
+$btn-hover-border-error: $color-error;

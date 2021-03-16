@@ -6,9 +6,9 @@ import Alert from './demo/Alert';
 const App: React.FC = () => {
   return (
     <div>
+      <Alert />
       <Button />
       <Icon />
-      <Alert />
     </div>
   );
 };

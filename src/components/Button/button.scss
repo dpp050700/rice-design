@@ -165,16 +165,16 @@ $namespace: '#{$class-prefix}-button';
   }
 }
 
-.#{$namespace}--danger {
-  @include button-style($btn-background-danger, $btn-color-danger, $btn-border-danger);
+.#{$namespace}--error {
+  @include button-style($btn-background-error, $btn-color-error, $btn-border-error);
   &.is-plain {
     @include button-style(
       $color-white,
-      $color-danger,
-      $btn-border-danger,
-      $btn-hover-background-danger,
-      $btn-hover-color-danger,
-      $btn-hover-border-danger
+      $color-error,
+      $btn-border-error,
+      $btn-hover-background-error,
+      $btn-hover-color-error,
+      $btn-hover-border-error
     );
   }
   &.is-plainest {
@@ -183,7 +183,7 @@ $namespace: '#{$class-prefix}-button';
       $btn-color-default,
       $btn-border-default,
       $color-white,
-      $color-danger,
+      $color-error,
       $btn-border-default
     );
   }
