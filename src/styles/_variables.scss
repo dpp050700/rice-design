@@ -90,7 +90,98 @@ $link-decoration: none !default;
 $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
+/** border */
+$border-color-default: $gray-400;
+
+/** text-color */
+$font-color-default: $gray-900;
+
 // body
 $body-bg: $white !default;
 $body-color: $gray-900 !default;
 $body-text-align: null !default;
+
+/** button */
+$btn-font-weight: 500;
+$btn-line-height: 1;
+$btn-disabled-opacity: 0.65 !default;
+$btn-border-width: 1px;
+$btn-box-shadow: inset 0 1px 0 rgba($white, 0.15), 0 1px 1px rgba($black, 0.075) !default;
+
+/** button-size */
+$btn-padding-x-default: 20px;
+$btn-padding-y-default: 10px;
+$btn-font-size-default: $font-size-l;
+$btn-border-radius-default: 4px;
+
+$btn-padding-x-large: 20px;
+$btn-padding-y-large: 12px;
+$btn-font-size-large: $font-size-l;
+$btn-border-radius-large: 4px;
+
+$btn-padding-x-medium: 15px;
+$btn-padding-y-medium: 8px;
+$btn-font-size-medium: $font-size-m;
+$btn-border-radius-medium: 4px;
+
+$btn-padding-x-small: 10px;
+$btn-padding-y-small: 6px;
+$btn-font-size-small: $font-size-s;
+$btn-border-radius-small: 2px;
+
+/** button-type */
+$btn-background-default: $white;
+$btn-background-hover-default: lighten($primary, 40%) !default;
+$btn-border-color-default: $border-color-default;
+$btn-border-color-hover-default: lighten($primary, 20%) !default;
+$btn-font-color-default: $font-color-default;
+$btn-font-color-hover-default: $primary;
+
+$btn-background-plain-default: $white;
+$btn-background-plain-hover-default: $white;
+$btn-border-color-plain-default: $border-color-default;
+$btn-border-color-plain-hover-default: lighten($primary, 10%) !default;
+$btn-font-color-plain-default: $font-color-default;
+$btn-font-color-plain-hover-default: $primary;
+
+$btn-background-primary: $primary;
+$btn-background-hover-primary: lighten($primary, 10%);
+$btn-border-color-primary: $primary;
+$btn-border-color-hover-primary: lighten($primary, 10%);
+$btn-font-color-primary: $white;
+$btn-font-color-hover-primary: $white;
+
+$btn-background-danger: $danger;
+$btn-background-hover-danger: lighten($danger, 10%);
+$btn-border-color-danger: $danger;
+$btn-border-color-hover-danger: lighten($danger, 10%);
+$btn-font-color-danger: $white;
+$btn-font-color-hover-danger: $white;
+
+$btn-background-success: $success;
+$btn-background-hover-success: lighten($success, 10%);
+$btn-border-color-success: $success;
+$btn-border-color-hover-success: lighten($success, 10%);
+$btn-font-color-success: $white;
+$btn-font-color-hover-success: $white;
+
+$btn-background-warning: $warning;
+$btn-background-hover-warning: lighten($warning, 10%);
+$btn-border-color-warning: $warning;
+$btn-border-color-hover-warning: lighten($warning, 10%);
+$btn-font-color-warning: $white;
+$btn-font-color-hover-warning: $white;
+
+$btn-background-info: $info;
+$btn-background-hover-info: lighten($info, 10%);
+$btn-border-color-info: $info;
+$btn-border-color-hover-info: lighten($info, 10%);
+$btn-font-color-info: $white;
+$btn-font-color-hover-info: $white;
+
+$btn-background-link: '';
+$btn-background-hover-link: '';
+$btn-border-color-link: '';
+$btn-border-color-hover-link: '';
+$btn-font-color-link: '';
+$btn-font-color-hover-link: '';

@@ -1,0 +1,125 @@
+.btn {
+  position: relative;
+  display: inline-block;
+  line-height: $btn-line-height;
+  color: $btn-font-color-default;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  background-image: none;
+  border: $btn-border-width solid transparent;
+  border-radius: $btn-border-radius-medium;
+
+  @include button-size(
+    $btn-padding-x-default,
+    $btn-padding-y-default,
+    $btn-font-size-default,
+    $btn-border-radius-default
+  );
+  @include button-style(
+    $btn-font-color-default,
+    $btn-border-color-default,
+    $btn-background-default,
+    $btn-font-color-hover-default,
+    $btn-border-color-hover-default,
+    $btn-background-hover-default
+  );
+
+  & + & {
+    margin-left: 10px;
+  }
+
+  &.is-plain {
+    @include button-style(
+      $btn-font-color-plain-default,
+      $btn-border-color-plain-default,
+      $btn-background-plain-default,
+      $btn-font-color-plain-hover-default,
+      $btn-border-color-plain-hover-default,
+      $btn-background-plain-hover-default
+    );
+  }
+}
+
+.btn-large {
+  @include button-size(
+    $btn-padding-x-large,
+    $btn-padding-y-large,
+    $btn-font-size-large,
+    $btn-border-radius-large
+  );
+}
+
+.btn-medium {
+  @include button-size(
+    $btn-padding-x-medium,
+    $btn-padding-y-medium,
+    $btn-font-size-medium,
+    $btn-border-radius-medium
+  );
+}
+
+.btn-small {
+  @include button-size(
+    $btn-padding-x-small,
+    $btn-padding-y-small,
+    $btn-font-size-small,
+    $btn-border-radius-small
+  );
+}
+
+.btn-primary {
+  @include button-style(
+    $btn-font-color-primary,
+    $btn-border-color-primary,
+    $btn-background-primary,
+    $btn-font-color-hover-primary,
+    $btn-border-color-hover-primary,
+    $btn-background-hover-primary
+  );
+}
+
+.btn-success {
+  @include button-style(
+    $btn-font-color-success,
+    $btn-border-color-success,
+    $btn-background-success,
+    $btn-font-color-hover-success,
+    $btn-border-color-hover-success,
+    $btn-background-hover-success
+  );
+}
+
+.btn-warning {
+  @include button-style(
+    $btn-font-color-warning,
+    $btn-border-color-warning,
+    $btn-background-warning,
+    $btn-font-color-hover-warning,
+    $btn-border-color-hover-warning,
+    $btn-background-hover-warning
+  );
+}
+
+.btn-danger {
+  @include button-style(
+    $btn-font-color-danger,
+    $btn-border-color-danger,
+    $btn-background-danger,
+    $btn-font-color-hover-danger,
+    $btn-border-color-hover-danger,
+    $btn-background-hover-danger
+  );
+}
+
+.btn-info {
+  @include button-style(
+    $btn-font-color-info,
+    $btn-border-color-info,
+    $btn-background-info,
+    $btn-font-color-hover-info,
+    $btn-border-color-hover-info,
+    $btn-background-hover-info
+  );
+}

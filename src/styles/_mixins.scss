@@ -1,0 +1,52 @@
+@mixin button-size(
+  $btn-padding-x,
+  $btn-padding-y,
+  $btn-font-size,
+  $btn-border-radius
+) {
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: $btn-font-size;
+  border-radius: $btn-border-radius;
+
+  &.is-round {
+    border-radius: $btn-padding-x;
+  }
+
+  &.is-circle {
+    padding: $btn-padding-y;
+    border-radius: 50%;
+  }
+}
+
+@mixin button-style(
+  $font-color,
+  $border-color,
+  $background-color,
+  $font-color-hover,
+  $border-color-hover,
+  $background-color-hover
+) {
+  color: $font-color;
+  background-color: $background-color;
+  border-color: $border-color;
+
+  &:hover {
+    color: $font-color-hover;
+    background-color: $background-color-hover;
+    border-color: $border-color-hover;
+  }
+
+  &:focus,
+  &.focus {
+    color: $font-color-hover;
+    background-color: $background-color-hover;
+    border-color: $border-color-hover;
+  }
+
+  &:disabled,
+  &.is-disabled {
+    color: $font-color;
+    background: $background-color;
+    border-color: $border-color;
+  }
+}
