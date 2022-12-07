@@ -151,6 +151,13 @@ $btn-border-color-hover-primary: lighten($primary, 10%);
 $btn-font-color-primary: $white;
 $btn-font-color-hover-primary: $white;
 
+$btn-background-plain-primary: lighten($primary, 40%);
+$btn-background-plain-hover-primary: $primary;
+$btn-border-color-plain-primary: lighten($primary, 20%);
+$btn-border-color-plain-hover-primary: $primary;
+$btn-font-color-plain-primary: lighten($primary, 10%);
+$btn-font-color-plain-hover-primary: $white;
+
 $btn-background-danger: $danger;
 $btn-background-hover-danger: lighten($danger, 10%);
 $btn-border-color-danger: $danger;

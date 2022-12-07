@@ -78,6 +78,16 @@
     $btn-border-color-hover-primary,
     $btn-background-hover-primary
   );
+  &.is-plain {
+    @include button-style(
+      $btn-font-color-plain-primary,
+      $btn-border-color-plain-primary,
+      $btn-background-plain-primary,
+      $btn-font-color-plain-hover-primary,
+      $btn-border-color-plain-hover-primary,
+      $btn-background-plain-hover-primary
+    );
+  }
 }
 
 .btn-success {
