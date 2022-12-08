@@ -39,6 +39,14 @@
       $btn-border-color-plain-hover-default,
       $btn-background-plain-hover-default
     );
+
+    &.is-text {
+      @include button-text($font-color-default, $primary)
+    }
+  }
+
+  &.is-text {
+    @include button-text($btn-font-color-text-default, $btn-font-color-text-hover-default)
   }
 }
 
@@ -87,6 +95,12 @@
       $btn-border-color-plain-hover-primary,
       $btn-background-plain-hover-primary
     );
+    &.is-text {
+      @include button-text($font-color-default, $primary)
+    }
+  }
+  &.is-text {
+    @include button-text($btn-font-color-text-primary, $btn-font-color-text-hover-primary)
   }
 }
 
@@ -99,6 +113,22 @@
     $btn-border-color-hover-success,
     $btn-background-hover-success
   );
+  &.is-plain {
+    @include button-style(
+      $btn-font-color-plain-success,
+      $btn-border-color-plain-success,
+      $btn-background-plain-success,
+      $btn-font-color-plain-hover-success,
+      $btn-border-color-plain-hover-success,
+      $btn-background-plain-hover-success
+    );
+    &.is-text {
+      @include button-text($font-color-default, $success)
+    }
+  }
+  &.is-text {
+    @include button-text($btn-font-color-text-success, $btn-font-color-text-hover-success)
+  }
 }
 
 .btn-warning {
@@ -110,6 +140,22 @@
     $btn-border-color-hover-warning,
     $btn-background-hover-warning
   );
+  &.is-plain {
+    @include button-style(
+      $btn-font-color-plain-warning,
+      $btn-border-color-plain-warning,
+      $btn-background-plain-warning,
+      $btn-font-color-plain-hover-warning,
+      $btn-border-color-plain-hover-warning,
+      $btn-background-plain-hover-warning
+    );
+    &.is-text {
+      @include button-text($font-color-default, $warning)
+    }
+  }
+  &.is-text {
+    @include button-text($btn-font-color-text-warning, $btn-font-color-text-hover-warning)
+  }
 }
 
 .btn-danger {
@@ -121,6 +167,22 @@
     $btn-border-color-hover-danger,
     $btn-background-hover-danger
   );
+  &.is-plain {
+    @include button-style(
+      $btn-font-color-plain-danger,
+      $btn-border-color-plain-danger,
+      $btn-background-plain-danger,
+      $btn-font-color-plain-hover-danger,
+      $btn-border-color-plain-hover-danger,
+      $btn-background-plain-hover-danger
+    );
+    &.is-text {
+      @include button-text($font-color-default, $danger)
+    }
+  }
+  &.is-text {
+    @include button-text($btn-font-color-text-danger, $btn-font-color-text-hover-danger)
+  }
 }
 
 .btn-info {
@@ -132,4 +194,21 @@
     $btn-border-color-hover-info,
     $btn-background-hover-info
   );
+  &.is-plain {
+    @include button-style(
+      $btn-font-color-plain-info,
+      $btn-border-color-plain-info,
+      $btn-background-plain-info,
+      $btn-font-color-plain-hover-info,
+      $btn-border-color-plain-hover-info,
+      $btn-background-plain-hover-info
+    );
+
+    &.is-text {
+      @include button-text($font-color-default, $info)
+    }
+  }
+  &.is-text {
+    @include button-text($btn-font-color-text-info, $btn-font-color-text-hover-info)
+  }
 }

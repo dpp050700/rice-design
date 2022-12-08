@@ -3,13 +3,7 @@ import classnames from 'classnames';
 
 export type ButtonSize = 'large' | 'medium' | 'small' | 'default';
 
-export type ButtonType =
-  | 'primary'
-  | 'default'
-  | 'danger'
-  | 'link'
-  | 'warning'
-  | 'info';
+export type ButtonType = 'primary' | 'default' | 'danger' | 'warning' | 'info';
 
 interface BaseButtonProps {
   className?: string;
@@ -17,27 +11,24 @@ interface BaseButtonProps {
   size?: ButtonSize;
   type?: ButtonType;
   plain?: boolean;
+  text?: boolean;
   round?: boolean;
   circle?: boolean;
-  href?: string;
   children: React.ReactNode;
 }
 
 const Button: React.FC<BaseButtonProps> = (props) => {
-  const { type, disabled, size, href, plain, children } = props;
+  const { type, disabled, size, plain, text, round, circle, children } = props;
   const classes = classnames('btn', {
     [`btn-${type}`]: type,
     [`btn-${size}`]: size,
-    'is-disabled': type === 'link' && disabled,
-    'is-plain': !!plain
+    'is-plain': plain,
+    'is-text': text,
+    'is-disabled': disabled,
+    'is-round': round,
+    'is-circle': circle
   });
-  if (type === 'link' && href) {
-    return (
-      <a className={classes} href={href}>
-        {children}
-      </a>
-    );
-  }
+
   return (
     <button className={classes} disabled={disabled}>
       {children}
@@ -46,6 +37,7 @@ const Button: React.FC<BaseButtonProps> = (props) => {
 };
 
 Button.defaultProps = {
+  text: false,
   disabled: false,
   type: 'default',
   size: 'default'

@@ -11,25 +11,126 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-$blue: #0d6efd !default;
-$indigo: #6610f2 !default;
-$purple: #6f42c1 !default;
-$pink: #d63384 !default;
-$red: #dc3545 !default;
-$orange: #fd7e14 !default;
-$yellow: #fadb14 !default;
-$green: #52c41a !default;
-$teal: #20c997 !default;
-$cyan: #17a2b8 !default;
+//$blue: #409EFF !default;
+//$indigo: #6610f2 !default;
+//$purple: #6f42c1 !default;
+//$pink: #d63384 !default;
+//$red: #dc3545 !default;
+//$orange: #fd7e14 !default;
+//$yellow: #fadb14 !default;
+//$green: #67C23A !default;
+//$teal: #20c997 !default;
+//$cyan: #17a2b8 !default;
 
-$primary: $blue !default;
+$primary: #409EFF !default;
 $secondary: $gray-600 !default;
-$success: $green !default;
-$info: $cyan !default;
-$warning: $yellow !default;
-$danger: $red !default;
+$success: #67C23A !default;
+$info: #909399 !default;
+$warning: #E6A23C !default;
+$danger: #F56C6C !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
+
+$primary-light-1: mix($white, $primary, 10%) !default;
+$primary-light-2: mix($white, $primary, 20%) !default;
+$primary-light-3: mix($white, $primary, 30%) !default;
+$primary-light-4: mix($white, $primary, 40%) !default;
+$primary-light-5: mix($white, $primary, 50%) !default;
+$primary-light-6: mix($white, $primary, 60%) !default;
+$primary-light-7: mix($white, $primary, 70%) !default;
+$primary-light-8: mix($white, $primary, 80%) !default;
+$primary-light-9: mix($white, $primary, 90%) !default;
+
+$primary-dark-1: mix($black, $primary, 10%) !default;
+$primary-dark-2: mix($black, $primary, 20%) !default;
+$primary-dark-3: mix($black, $primary, 30%) !default;
+$primary-dark-4: mix($black, $primary, 40%) !default;
+$primary-dark-5: mix($black, $primary, 50%) !default;
+$primary-dark-6: mix($black, $primary, 60%) !default;
+$primary-dark-7: mix($black, $primary, 70%) !default;
+$primary-dark-8: mix($black, $primary, 80%) !default;
+$primary-dark-9: mix($black, $primary, 90%) !default;
+
+$success-light-1: mix($white, $success, 10%) !default;
+$success-light-2: mix($white, $success, 20%) !default;
+$success-light-3: mix($white, $success, 30%) !default;
+$success-light-4: mix($white, $success, 40%) !default;
+$success-light-5: mix($white, $success, 50%) !default;
+$success-light-6: mix($white, $success, 60%) !default;
+$success-light-7: mix($white, $success, 70%) !default;
+$success-light-8: mix($white, $success, 80%) !default;
+$success-light-9: mix($white, $success, 90%) !default;
+
+$success-dark-1: mix($black, $success, 10%) !default;
+$success-dark-2: mix($black, $success, 20%) !default;
+$success-dark-3: mix($black, $success, 30%) !default;
+$success-dark-4: mix($black, $success, 40%) !default;
+$success-dark-5: mix($black, $success, 50%) !default;
+$success-dark-6: mix($black, $success, 60%) !default;
+$success-dark-7: mix($black, $success, 70%) !default;
+$success-dark-8: mix($black, $success, 80%) !default;
+$success-dark-9: mix($black, $success, 90%) !default;
+
+$info-light-1: mix($white, $info, 10%) !default;
+$info-light-2: mix($white, $info, 20%) !default;
+$info-light-3: mix($white, $info, 30%) !default;
+$info-light-4: mix($white, $info, 40%) !default;
+$info-light-5: mix($white, $info, 50%) !default;
+$info-light-6: mix($white, $info, 60%) !default;
+$info-light-7: mix($white, $info, 70%) !default;
+$info-light-8: mix($white, $info, 80%) !default;
+$info-light-9: mix($white, $info, 90%) !default;
+
+$info-dark-1: mix($black, $info, 10%) !default;
+$info-dark-2: mix($black, $info, 20%) !default;
+$info-dark-3: mix($black, $info, 30%) !default;
+$info-dark-4: mix($black, $info, 40%) !default;
+$info-dark-5: mix($black, $info, 50%) !default;
+$info-dark-6: mix($black, $info, 60%) !default;
+$info-dark-7: mix($black, $info, 70%) !default;
+$info-dark-8: mix($black, $info, 80%) !default;
+$info-dark-9: mix($black, $info, 90%) !default;
+
+$warning-light-1: mix($white, $warning, 10%) !default;
+$warning-light-2: mix($white, $warning, 20%) !default;
+$warning-light-3: mix($white, $warning, 30%) !default;
+$warning-light-4: mix($white, $warning, 40%) !default;
+$warning-light-5: mix($white, $warning, 50%) !default;
+$warning-light-6: mix($white, $warning, 60%) !default;
+$warning-light-7: mix($white, $warning, 70%) !default;
+$warning-light-8: mix($white, $warning, 80%) !default;
+$warning-light-9: mix($white, $warning, 90%) !default;
+
+$warning-dark-1: mix($black, $warning, 10%) !default;
+$warning-dark-2: mix($black, $warning, 20%) !default;
+$warning-dark-3: mix($black, $warning, 30%) !default;
+$warning-dark-4: mix($black, $warning, 40%) !default;
+$warning-dark-5: mix($black, $warning, 50%) !default;
+$warning-dark-6: mix($black, $warning, 60%) !default;
+$warning-dark-7: mix($black, $warning, 70%) !default;
+$warning-dark-8: mix($black, $warning, 80%) !default;
+$warning-dark-9: mix($black, $warning, 90%) !default;
+
+$danger-light-1: mix($white, $danger, 10%) !default;
+$danger-light-2: mix($white, $danger, 20%) !default;
+$danger-light-3: mix($white, $danger, 30%) !default;
+$danger-light-4: mix($white, $danger, 40%) !default;
+$danger-light-5: mix($white, $danger, 50%) !default;
+$danger-light-6: mix($white, $danger, 60%) !default;
+$danger-light-7: mix($white, $danger, 70%) !default;
+$danger-light-8: mix($white, $danger, 80%) !default;
+$danger-light-9: mix($white, $danger, 90%) !default;
+
+$danger-dark-1: mix($black, $danger, 10%) !default;
+$danger-dark-2: mix($black, $danger, 20%) !default;
+$danger-dark-3: mix($black, $danger, 30%) !default;
+$danger-dark-4: mix($black, $danger, 40%) !default;
+$danger-dark-5: mix($black, $danger, 50%) !default;
+$danger-dark-6: mix($black, $danger, 60%) !default;
+$danger-dark-7: mix($black, $danger, 70%) !default;
+$danger-dark-8: mix($black, $danger, 80%) !default;
+$danger-dark-9: mix($black, $danger, 90%) !default;
+
 
 /** padding  */
 $padding-base: 4px;
@@ -91,10 +192,16 @@ $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
 /** border */
-$border-color-default: $gray-400;
+$border-color-default: #DCDFE6;
+$border-color-light: #E4E7ED;
+$border-color-lighter: #EBEEF5;
+$border-color-extra-light: #F2F6FC;
 
 /** text-color */
-$font-color-default: $gray-900;
+$font-color-primary: #303133;
+$font-color-default: #606266;
+$font-color-light: #909399;
+$font-color-placeholder: #C0C4CC;
 
 // body
 $body-bg: $white !default;
@@ -130,61 +237,107 @@ $btn-font-size-small: $font-size-s;
 $btn-border-radius-small: 2px;
 
 /** button-type */
-$btn-background-default: $white;
-$btn-background-hover-default: lighten($primary, 40%) !default;
-$btn-border-color-default: $border-color-default;
-$btn-border-color-hover-default: lighten($primary, 20%) !default;
 $btn-font-color-default: $font-color-default;
+$btn-border-color-default: $border-color-default;
+$btn-background-default: $white;
 $btn-font-color-hover-default: $primary;
+$btn-border-color-hover-default: $primary-light-7;
+$btn-background-hover-default: $primary-light-9;
 
-$btn-background-plain-default: $white;
-$btn-background-plain-hover-default: $white;
-$btn-border-color-plain-default: $border-color-default;
-$btn-border-color-plain-hover-default: lighten($primary, 10%) !default;
 $btn-font-color-plain-default: $font-color-default;
+$btn-border-color-plain-default: $border-color-default;
+$btn-background-plain-default: $white;
 $btn-font-color-plain-hover-default: $primary;
+$btn-border-color-plain-hover-default: $primary;
+$btn-background-plain-hover-default: $white;
+
+$btn-font-color-text-default: $font-color-default;
+$btn-font-color-text-hover-default: $primary;
 
 $btn-background-primary: $primary;
-$btn-background-hover-primary: lighten($primary, 10%);
+$btn-background-hover-primary: $primary-light-2;
 $btn-border-color-primary: $primary;
-$btn-border-color-hover-primary: lighten($primary, 10%);
+$btn-border-color-hover-primary: $primary-light-2;
 $btn-font-color-primary: $white;
 $btn-font-color-hover-primary: $white;
 
-$btn-background-plain-primary: lighten($primary, 40%);
+$btn-font-color-text-primary: $primary;
+$btn-font-color-text-hover-primary: $primary-dark-2;
+
+$btn-background-plain-primary: $primary-light-9;
 $btn-background-plain-hover-primary: $primary;
-$btn-border-color-plain-primary: lighten($primary, 20%);
+$btn-border-color-plain-primary: $primary-light-6;
 $btn-border-color-plain-hover-primary: $primary;
-$btn-font-color-plain-primary: lighten($primary, 10%);
+$btn-font-color-plain-primary: $primary;
 $btn-font-color-plain-hover-primary: $white;
 
 $btn-background-danger: $danger;
-$btn-background-hover-danger: lighten($danger, 10%);
+$btn-background-hover-danger: $danger-light-2;
 $btn-border-color-danger: $danger;
-$btn-border-color-hover-danger: lighten($danger, 10%);
+$btn-border-color-hover-danger: $danger-light-2;
 $btn-font-color-danger: $white;
 $btn-font-color-hover-danger: $white;
 
+$btn-font-color-text-danger: $danger;
+$btn-font-color-text-hover-danger: $danger-dark-2;
+
+$btn-background-plain-danger: $danger-light-9;
+$btn-background-plain-hover-danger: $danger;
+$btn-border-color-plain-danger: $danger-light-6;
+$btn-border-color-plain-hover-danger: $danger;
+$btn-font-color-plain-danger: $danger;
+$btn-font-color-plain-hover-danger: $white;
+
 $btn-background-success: $success;
-$btn-background-hover-success: lighten($success, 10%);
+$btn-background-hover-success: $success-light-2;
 $btn-border-color-success: $success;
-$btn-border-color-hover-success: lighten($success, 10%);
+$btn-border-color-hover-success: $success-light-2;
 $btn-font-color-success: $white;
 $btn-font-color-hover-success: $white;
 
+$btn-font-color-text-success: $success;
+$btn-font-color-text-hover-success: $success-dark-2;
+
+$btn-background-plain-success: $success-light-9;
+$btn-background-plain-hover-success: $success;
+$btn-border-color-plain-success: $success-light-6;
+$btn-border-color-plain-hover-success: $success;
+$btn-font-color-plain-success: $success;
+$btn-font-color-plain-hover-success: $white;
+
 $btn-background-warning: $warning;
-$btn-background-hover-warning: lighten($warning, 10%);
+$btn-background-hover-warning: $warning-light-2;
 $btn-border-color-warning: $warning;
-$btn-border-color-hover-warning: lighten($warning, 10%);
+$btn-border-color-hover-warning: $warning-light-2;
 $btn-font-color-warning: $white;
 $btn-font-color-hover-warning: $white;
 
+$btn-font-color-text-warning: $warning;
+$btn-font-color-text-hover-warning: $warning-dark-2;
+
+$btn-background-plain-warning: $warning-light-9;
+$btn-background-plain-hover-warning: $warning;
+$btn-border-color-plain-warning: $warning-light-6;
+$btn-border-color-plain-hover-warning: $warning;
+$btn-font-color-plain-warning: $warning;
+$btn-font-color-plain-hover-warning: $white;
+
 $btn-background-info: $info;
-$btn-background-hover-info: lighten($info, 10%);
+$btn-background-hover-info: $info-light-2;
 $btn-border-color-info: $info;
-$btn-border-color-hover-info: lighten($info, 10%);
+$btn-border-color-hover-info: $info-light-2;
 $btn-font-color-info: $white;
 $btn-font-color-hover-info: $white;
+
+$btn-font-color-text-info: $info;
+$btn-font-color-text-hover-info: $info-dark-2;
+
+$btn-background-plain-info: $info-light-9;
+$btn-background-plain-hover-info: $info;
+$btn-border-color-plain-info: $info-light-6;
+$btn-border-color-plain-hover-info: $info;
+$btn-font-color-plain-info: $info;
+$btn-font-color-plain-hover-info: $white;
 
 $btn-background-link: '';
 $btn-background-hover-link: '';
