@@ -16,6 +16,10 @@
     padding: $btn-padding-y;
     border-radius: 50%;
   }
+
+  &.is-block {
+    width: 100%;
+  }
 }
 
 @mixin button-style(

@@ -188,6 +188,17 @@ function App() {
           </Button>
         </div>
       </div>
+      <div>
+        <h1>Block</h1>
+        <Button size="large" block={true}>
+          large
+        </Button>
+        <div style={{ width: '200px' }} className="space-vertical">
+          <Button size="default" block={true} round={true}>
+            default
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }
