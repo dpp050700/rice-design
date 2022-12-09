@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './components/Button/button';
 import Tag from './components/Tag/tag';
+import Icon from './components/Icon/icon';
 
 const ButtonDemo = () => {
   return (
@@ -274,6 +275,14 @@ const TagDemo = () => {
   );
 };
 
+const IconDemo = () => {
+  return (
+    <div>
+      <Icon name="delete"></Icon>
+    </div>
+  );
+};
+
 function App() {
   const pathName = window.location.pathname.replace('/', '');
   switch (pathName) {
@@ -281,6 +290,8 @@ function App() {
       return <ButtonDemo />;
     case 'tag':
       return <TagDemo />;
+    case 'icon':
+      return <IconDemo />;
     default:
       return null;
   }
