@@ -339,9 +339,96 @@ $btn-border-color-plain-hover-info: $info;
 $btn-font-color-plain-info: $info;
 $btn-font-color-plain-hover-info: $white;
 
-$btn-background-link: '';
-$btn-background-hover-link: '';
-$btn-border-color-link: '';
-$btn-border-color-hover-link: '';
-$btn-font-color-link: '';
-$btn-font-color-hover-link: '';
+/** tag */
+$tag-padding-x-default: 10px;
+$tag-padding-y-default: 6px;
+$tag-font-size-default: $font-size-s;
+$tag-border-radius-default: 4px;
+
+$tag-padding-x-large: 10px;
+$tag-padding-y-large: 8px;
+$tag-font-size-large: $font-size-m;
+$tag-border-radius-large: 4px;
+
+$tag-padding-x-medium: 6px;
+$tag-padding-y-medium: 4px;
+$tag-font-size-medium: $font-size-s;
+$tag-border-radius-medium: 2px;
+
+$tag-padding-x-small: 4px;
+$tag-padding-y-small: 2px;
+$tag-font-size-small: $font-size-normal;
+$tag-border-radius-small: 2px;
+
+$tag-font-color-dark-default: $font-color-default;
+$tag-border-color-dark-default: $border-color-default;
+$tag-background-dark-default: $white;
+
+$tag-font-color-dark-primary: $white;
+$tag-border-color-dark-primary: $primary;
+$tag-background-dark-primary: $primary;
+
+$tag-font-color-dark-success: $white;
+$tag-border-color-dark-success: $success;
+$tag-background-dark-success: $success;
+
+$tag-font-color-dark-warning: $white;
+$tag-border-color-dark-warning: $warning;
+$tag-background-dark-warning: $warning;
+
+$tag-font-color-dark-danger: $white;
+$tag-border-color-dark-danger: $warning;
+$tag-background-dark-danger: $warning;
+
+$tag-font-color-dark-info: $white;
+$tag-border-color-dark-info: $info;
+$tag-background-dark-info: $info;
+
+$tag-font-color-light-default: $font-color-default;
+$tag-border-color-light-default: $border-color-default;
+$tag-background-light-default: $white;
+
+$tag-font-color-light-primary: $primary;
+$tag-border-color-light-primary: $primary-light-6;
+$tag-background-light-primary: $primary-light-9;
+
+$tag-font-color-light-success: $success;
+$tag-border-color-light-success: $success-light-6;
+$tag-background-light-success: $success-light-9;
+
+$tag-font-color-light-warning: $warning;
+$tag-border-color-light-warning: $warning-light-6;
+$tag-background-light-warning: $warning-light-9;
+
+$tag-font-color-light-danger: $danger;
+$tag-border-color-light-danger: $danger-light-6;
+$tag-background-light-danger: $danger-light-9;
+
+$tag-font-color-light-info: $info;
+$tag-border-color-light-info: $info-light-6;
+$tag-background-light-info: $info-light-9;
+
+$tag-font-color-plain-default: $font-color-default;
+$tag-border-color-plain-default: $border-color-default;
+$tag-background-plain-default: $white;
+
+$tag-font-color-plain-primary: $primary;
+$tag-border-color-plain-primary: $primary-light-6;
+$tag-background-plain-primary: $white;
+
+$tag-font-color-plain-success: $success;
+$tag-border-color-plain-success: $success-light-6;
+$tag-background-plain-success: $white;
+
+$tag-font-color-plain-warning: $warning;
+$tag-border-color-plain-warning: $warning-light-6;
+$tag-background-plain-warning: $white;
+
+$tag-font-color-plain-danger: $danger;
+$tag-border-color-plain-danger: $danger-light-6;
+$tag-background-plain-danger: $white;
+
+$tag-font-color-plain-info: $info;
+$tag-border-color-plain-info: $info-light-6;
+$tag-background-plain-info: $white;
+

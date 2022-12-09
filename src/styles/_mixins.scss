@@ -71,3 +71,24 @@
     color: $font-color-hover;
   }
 }
+
+@mixin tag-size(
+  $tag-padding-x,
+  $tag-padding-y,
+  $tag-font-size,
+  $tag-border-radius
+) {
+  padding: $tag-padding-y $tag-padding-x;
+  font-size: $tag-font-size;
+  border-radius: $tag-border-radius;
+}
+
+@mixin tag-style(
+  $font-color,
+  $border-color,
+  $background-color,
+) {
+  color: $font-color;
+  background-color: $background-color;
+  border-color: $border-color;
+}

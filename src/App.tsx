@@ -1,7 +1,8 @@
 import React from 'react';
 import Button from './components/Button/button';
+import Tag from './components/Tag/tag';
 
-function App() {
+const ButtonDemo = () => {
   return (
     <div className="App">
       <div>
@@ -201,6 +202,89 @@ function App() {
       </div>
     </div>
   );
+};
+
+const TagDemo = () => {
+  return (
+    <div>
+      <div>
+        <p>size</p>
+        <Tag size="large">标签</Tag>
+        <Tag size="default">标签</Tag>
+        <Tag size="medium">标签</Tag>
+        <Tag size="small">标签</Tag>
+      </div>
+      <div>
+        <p>type</p>
+        <Tag type="primary">标签</Tag>
+        <Tag type="success">标签</Tag>
+        <Tag type="warning">标签</Tag>
+        <Tag type="info">标签</Tag>
+        <Tag type="danger">标签</Tag>
+      </div>
+      <div>
+        <p>dark</p>
+        <Tag effect="dark" type="primary">
+          标签
+        </Tag>
+        <Tag effect="dark" type="success">
+          标签
+        </Tag>
+        <Tag effect="dark" type="warning">
+          标签
+        </Tag>
+        <Tag effect="dark" type="info">
+          标签
+        </Tag>
+        <Tag effect="dark" type="danger">
+          标签
+        </Tag>
+      </div>
+      <div>
+        <p>plain</p>
+        <Tag effect="plain" type="primary">
+          标签
+        </Tag>
+        <Tag effect="plain" type="success">
+          标签
+        </Tag>
+        <Tag effect="plain" type="warning">
+          标签
+        </Tag>
+        <Tag effect="plain" type="info">
+          标签
+        </Tag>
+        <Tag effect="plain" type="danger">
+          标签
+        </Tag>
+      </div>
+      <div>
+        <p>color</p>
+        <Tag effect="plain" type="primary" color="#f50">
+          标签
+        </Tag>
+        <Tag effect="dark" type="primary" color="#f50">
+          标签
+        </Tag>
+        <Tag effect="light" type="primary" color="#f50">
+          标签
+        </Tag>
+      </div>
+    </div>
+  );
+};
+
+function App() {
+  const pathName = window.location.pathname.replace('/', '');
+  switch (pathName) {
+    case 'button':
+      return <ButtonDemo />;
+    case 'tag':
+      return <TagDemo />;
+    default:
+      return null;
+  }
+  return null;
 }
 
 export default App;
