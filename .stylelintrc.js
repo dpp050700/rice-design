@@ -25,6 +25,7 @@ module.exports = {
       { ignoreFontFamilyNames: ['monospace'] }
     ],
     'property-no-vendor-prefix': null,
-    'color-function-notation': 0
+    'color-function-notation': 0,
+    'selector-class-pattern': 0
   }
 };

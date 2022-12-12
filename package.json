@@ -27,7 +27,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint-check": "tsc && npx lint-staged",
-    "stylelint": "stylelint src/**/*.scss --config .stylelintrc.js"
+    "stylelint": "stylelint src/**/*.scss --config .stylelintrc.js --fix"
   },
   "eslintConfig": {
     "extends": [

@@ -1,9 +1,10 @@
 .tag {
-  display: inline-block;
-  border-width: 1px;
-  border-style: solid;
   box-sizing: border-box;
+  display: inline-block;
   white-space: nowrap;
+  border-style: solid;
+  border-width: 1px;
+
   @include tag-size(
     $tag-padding-x-default,
     $tag-padding-y-default,
@@ -11,7 +12,7 @@
     $tag-border-radius-default
   );
 
-  &+.tag {
+  & + .tag {
     margin-left: 10px;
   }
 }
@@ -51,6 +52,7 @@
       $tag-background-dark-primary
     );
   }
+
   &.tag--light {
     @include tag-style(
       $tag-font-color-light-primary,
@@ -58,6 +60,7 @@
       $tag-background-light-primary
     );
   }
+
   &.tag--plain {
     @include tag-style(
       $tag-font-color-plain-primary,
@@ -75,6 +78,7 @@
       $tag-background-dark-success
     );
   }
+
   &.tag--light {
     @include tag-style(
       $tag-font-color-light-success,
@@ -82,6 +86,7 @@
       $tag-background-light-success
     );
   }
+
   &.tag--plain {
     @include tag-style(
       $tag-font-color-plain-success,
@@ -99,6 +104,7 @@
       $tag-background-dark-danger
     );
   }
+
   &.tag--light {
     @include tag-style(
       $tag-font-color-light-danger,
@@ -106,6 +112,7 @@
       $tag-background-light-danger
     );
   }
+
   &.tag--plain {
     @include tag-style(
       $tag-font-color-plain-danger,
@@ -123,6 +130,7 @@
       $tag-background-dark-info
     );
   }
+
   &.tag--light {
     @include tag-style(
       $tag-font-color-light-info,
@@ -130,6 +138,7 @@
       $tag-background-light-info
     );
   }
+
   &.tag--plain {
     @include tag-style(
       $tag-font-color-plain-info,
@@ -138,6 +147,7 @@
     );
   }
 }
+
 .tag-warning {
   &.tag--dark {
     @include tag-style(
@@ -146,6 +156,7 @@
       $tag-background-dark-warning
     );
   }
+
   &.tag--light {
     @include tag-style(
       $tag-font-color-light-warning,
@@ -153,6 +164,7 @@
       $tag-background-light-warning
     );
   }
+
   &.tag--plain {
     @include tag-style(
       $tag-font-color-plain-warning,

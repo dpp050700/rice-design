@@ -11,23 +11,23 @@ $gray-800: #343a40 !default;
 $gray-900: #212529 !default;
 $black: #000 !default;
 
-//$blue: #409EFF !default;
-//$indigo: #6610f2 !default;
-//$purple: #6f42c1 !default;
-//$pink: #d63384 !default;
-//$red: #dc3545 !default;
-//$orange: #fd7e14 !default;
-//$yellow: #fadb14 !default;
-//$green: #67C23A !default;
-//$teal: #20c997 !default;
-//$cyan: #17a2b8 !default;
+// $blue: #409EFF !default;
+// $indigo: #6610f2 !default;
+// $purple: #6f42c1 !default;
+// $pink: #d63384 !default;
+// $red: #dc3545 !default;
+// $orange: #fd7e14 !default;
+// $yellow: #fadb14 !default;
+// $green: #67C23A !default;
+// $teal: #20c997 !default;
+// $cyan: #17a2b8 !default;
 
-$primary: #409EFF !default;
+$primary: #409eff !default;
 $secondary: $gray-600 !default;
-$success: #67C23A !default;
+$success: #67c23a !default;
 $info: #909399 !default;
-$warning: #E6A23C !default;
-$danger: #F56C6C !default;
+$warning: #e6a23c !default;
+$danger: #f56c6c !default;
 $light: $gray-100 !default;
 $dark: $gray-800 !default;
 
@@ -131,7 +131,6 @@ $danger-dark-7: mix($black, $danger, 70%) !default;
 $danger-dark-8: mix($black, $danger, 80%) !default;
 $danger-dark-9: mix($black, $danger, 90%) !default;
 
-
 /** padding  */
 $padding-base: 4px;
 $padding-none: 0;
@@ -192,16 +191,16 @@ $link-hover-color: darken($link-color, 15%) !default;
 $link-hover-decoration: underline !default;
 
 /** border */
-$border-color-default: #DCDFE6;
-$border-color-light: #E4E7ED;
-$border-color-lighter: #EBEEF5;
-$border-color-extra-light: #F2F6FC;
+$border-color-default: #dcdfe6;
+$border-color-light: #e4e7ed;
+$border-color-lighter: #ebeef5;
+$border-color-extra-light: #f2f6fc;
 
 /** text-color */
 $font-color-primary: #303133;
 $font-color-default: #606266;
 $font-color-light: #909399;
-$font-color-placeholder: #C0C4CC;
+$font-color-placeholder: #c0c4cc;
 
 // body
 $body-bg: $white !default;
@@ -431,4 +430,3 @@ $tag-background-plain-danger: $white;
 $tag-font-color-plain-info: $info;
 $tag-border-color-plain-info: $info-light-6;
 $tag-background-plain-info: $white;
-

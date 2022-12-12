@@ -50,23 +50,26 @@
   &:disabled,
   &.is-disabled {
     color: $font-color;
+    color: mix($font-color, $white, 40%);
     background-color: mix($background-color, $white);
     border-color: mix($border-color, $white);
-    color: mix($font-color, $white, 40%);
-    &:hover{
+
+    &:hover {
       cursor: not-allowed;
     }
   }
 }
 
 @mixin button-text($font-color, $font-color-hover) {
-  border: none;
   padding: 0;
   color: $font-color;
   background-color: transparent;
+  border: none;
+
   &:hover {
     color: $font-color-hover;
   }
+
   &:focus {
     color: $font-color-hover;
   }
