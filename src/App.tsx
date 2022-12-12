@@ -2,6 +2,7 @@ import React from 'react';
 import Button from './components/Button/button';
 import Tag from './components/Tag/tag';
 import Icon from './components/Icon/icon';
+import Alert from './components/Alert/alert';
 
 const ButtonDemo = () => {
   return (
@@ -283,19 +284,48 @@ const IconDemo = () => {
   );
 };
 
+const AlertDemo = () => {
+  const AlertIcon = () => {
+    return <div>223s</div>;
+  };
+  return (
+    <div>
+      <Alert title="11" description="22" />
+      <Alert title="11" description="22" icon={<div>222</div>} />
+      <Alert
+        title="11"
+        description="22"
+        icon={<AlertIcon />}
+        closeContent={'关闭'}
+      />
+    </div>
+  );
+};
+
+const demo: any = {
+  ButtonDemo,
+  IconDemo,
+  TagDemo,
+  AlertDemo
+};
+
 function App() {
   const pathName = window.location.pathname.replace('/', '');
-  switch (pathName) {
-    case 'button':
-      return <ButtonDemo />;
-    case 'tag':
-      return <TagDemo />;
-    case 'icon':
-      return <IconDemo />;
-    default:
-      return null;
-  }
-  return null;
+  const demoName: any = pathName[0].toUpperCase() + pathName.slice(1) + 'Demo';
+  return React.createElement(demo[demoName]);
+  // switch (pathName) {
+  //   case 'button':
+  //     return <ButtonDemo />;
+  //   case 'tag':
+  //     return <TagDemo />;
+  //   case 'icon':
+  //     return <IconDemo />;
+  //   case 'alert':
+  //     return <AlertDemo />;
+  //   default:
+  //     return null;
+  // }
+  // return null;
 }
 
 export default App;
