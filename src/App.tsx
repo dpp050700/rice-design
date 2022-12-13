@@ -3,6 +3,7 @@ import Button from './components/Button/button';
 import Tag from './components/Tag/tag';
 import Icon from './components/Icon/icon';
 import Alert from './components/Alert/alert';
+import message from './components/Message/message';
 
 const ButtonDemo = () => {
   return (
@@ -323,11 +324,22 @@ const AlertDemo = () => {
   );
 };
 
+const MessageDemo = () => {
+  return (
+    <div>
+      <Button type="primary" onClick={() => message.success(1112)}>
+        success
+      </Button>
+    </div>
+  );
+};
+
 const demo: any = {
   ButtonDemo,
   IconDemo,
   TagDemo,
-  AlertDemo
+  AlertDemo,
+  MessageDemo
 };
 
 function App() {

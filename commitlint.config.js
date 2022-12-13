@@ -7,7 +7,7 @@ module.exports = {
     'type-enum': [
       2,
       'always',
-      ['Project', 'Style', 'Button', 'Tag', 'Icon', 'Alert']
+      ['Project', 'Style', 'Button', 'Tag', 'Icon', 'Alert', 'Message']
     ],
     // subject 大小写不做校验
     'subject-case': [0]
