@@ -4,9 +4,80 @@
   display: flex;
   align-items: center;
   width: 100%;
+  padding: 8px 16px;
   overflow: hidden;
+  border-radius: 4px;
 
   .alert-content {
     flex: 1;
+    padding: 0 8px;
+
+    .alert-title {
+      font-size: $font-size-s;
+      font-weight: $font-weight-bolder;
+      line-height: $line-height-s;
+    }
+
+    .alert-description {
+      margin: 5px 0 0;
+      font-size: $font-size-normal;
+      line-height: $line-height-s;
+    }
+  }
+
+  .alert-icon {
+    font-size: 28px;
+  }
+
+  .alert-close {
+    cursor: pointer;
+  }
+
+  &.alert--success {
+    color: $alert-font-color-success;
+    background: $alert-background-success;
+    border-color: $alert-border-color-success;
+
+    &.is-plain {
+      color: $alert-font-color-plain-success;
+      background: $alert-background-plain-success;
+      border-color: $alert-border-color-plain-success;
+    }
+  }
+
+  &.alert--error {
+    color: $alert-font-color-error;
+    background: $alert-background-error;
+    border-color: $alert-border-color-error;
+
+    &.is-plain {
+      color: $alert-font-color-plain-error;
+      background: $alert-background-plain-error;
+      border-color: $alert-border-color-plain-error;
+    }
+  }
+
+  &.alert--info {
+    color: $alert-font-color-info;
+    background: $alert-background-info;
+    border-color: $alert-border-color-info;
+
+    &.is-plain {
+      color: $alert-font-color-plain-info;
+      background: $alert-background-plain-info;
+      border-color: $alert-border-color-plain-info;
+    }
+  }
+
+  &.alert--warning {
+    color: $alert-font-color-warning;
+    background: $alert-background-warning;
+    border-color: $alert-border-color-warning;
+
+    &.is-plain {
+      color: $alert-font-color-plain-warning;
+      background: $alert-background-plain-warning;
+      border-color: $alert-border-color-plain-warning;
+    }
   }
 }

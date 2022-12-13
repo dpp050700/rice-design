@@ -430,3 +430,37 @@ $tag-background-plain-danger: $white;
 $tag-font-color-plain-info: $info;
 $tag-border-color-plain-info: $info-light-6;
 $tag-background-plain-info: $white;
+
+/** alert */
+
+$alert-font-color-success: $white;
+$alert-border-color-success: $success;
+$alert-background-success: $success;
+
+$alert-font-color-warning: $white;
+$alert-border-color-warning: $warning;
+$alert-background-warning: $warning;
+
+$alert-font-color-error: $white;
+$alert-border-color-error: $danger;
+$alert-background-error: $danger;
+
+$alert-font-color-info: $white;
+$alert-border-color-info: $info;
+$alert-background-info: $info;
+
+$alert-font-color-plain-success: $success;
+$alert-border-color-plain-success: $success-light-6;
+$alert-background-plain-success: $success-light-9;
+
+$alert-font-color-plain-warning: $warning;
+$alert-border-color-plain-warning: $warning-light-6;
+$alert-background-plain-warning: $warning-light-9;
+
+$alert-font-color-plain-error: $danger;
+$alert-border-color-plain-error: $danger-light-6;
+$alert-background-plain-error: $danger-light-9;
+
+$alert-font-color-plain-info: $info;
+$alert-border-color-plain-info: $info-light-6;
+$alert-background-plain-info: $info-light-9;

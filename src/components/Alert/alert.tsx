@@ -21,6 +21,7 @@ interface AlertProps {
   closeContent?: React.ReactNode;
   plain?: boolean;
   showIcon?: boolean;
+  onClose?: React.MouseEventHandler<HTMLDivElement>;
 }
 
 const IconNode = ({ icon }: { icon: string | React.ReactNode }) => {
@@ -31,20 +32,26 @@ const IconNode = ({ icon }: { icon: string | React.ReactNode }) => {
 interface CloseContextProps {
   closeContent?: AlertProps['closeContent'];
   closeable: AlertProps['closeable'];
+  onClose?: AlertProps['onClose'];
 }
 
-const CloseContext = ({ closeContent, closeable }: CloseContextProps) => {
+const CloseContext = ({
+  closeContent,
+  closeable,
+  onClose
+}: CloseContextProps) => {
   if (!closeable) {
     return null;
   }
   return (
-    <div className="alert-close">
+    <div className="alert-close" onClick={onClose}>
       {closeContent ? closeContent : <Icon name="close" />}
     </div>
   );
 };
 
 const Alert: React.FC<AlertProps> = (props) => {
+  const [closed, setClosed] = React.useState(false);
   const {
     className,
     title,
@@ -54,12 +61,22 @@ const Alert: React.FC<AlertProps> = (props) => {
     closeContent,
     closeable,
     plain,
-    showIcon
+    showIcon,
+    onClose
   } = props;
   const classes = classnames(className, 'alert', {
-    [`alert-${type}`]: type,
-    [`alert-${plain}`]: plain
+    [`alert--${type}`]: type,
+    [`is-plain`]: plain
   });
+
+  const handleClose = (e: React.MouseEvent<HTMLDivElement>) => {
+    setClosed(true);
+    onClose?.(e);
+  };
+
+  if (closed) {
+    return null;
+  }
 
   return (
     <div className={classes}>
@@ -71,7 +88,11 @@ const Alert: React.FC<AlertProps> = (props) => {
         ) : null}
       </div>
       {closeable ? (
-        <CloseContext closeable={closeable} closeContent={closeContent} />
+        <CloseContext
+          closeable={closeable}
+          closeContent={closeContent}
+          onClose={handleClose}
+        />
       ) : null}
     </div>
   );
