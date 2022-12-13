@@ -15,8 +15,10 @@ program.parse();
 
 function smallCamel(str, separator = '-') {
   const reg = new RegExp(`${separator}([a-z])`, 'g');
+  str = str[0].toLowerCase() + str.slice(1);
   return str.replace(reg, (p, m) => m.toUpperCase());
 }
+
 function bigCamel(str, separator = '-') {
   const s = smallCamel(str, separator);
   return s.replace(s.charAt(0), s.charAt(0).toUpperCase());
@@ -54,7 +56,7 @@ function createTSXTemplate(componentName, filePath) {
     `const ${componentName}: React.FC<${componentName}Props> = (props) => {\n` +
     `  const { className } = props;\n` +
     `  const classes = classnames(className);\n\n` +
-    `  return <i className={classes}></i>;\n` +
+    `  return <div className={classes}></div>;\n` +
     `};\n\n` +
     `${componentName}.defaultProps = {};\n\n` +
     `export default ${componentName};\n`;
@@ -68,8 +70,8 @@ function createScssTemplate(filePath, componentName) {
   const content = fs.readFileSync(scssEntry, 'utf8');
   fs.writeFileSync(
     scssEntry,
-    `${content}\n@import '../components/${componentName}/${smallCamel(
+    `${content}@import '../components/${componentName}/${smallCamel(
       componentName
-    )};'`
+    )}';\n`
   );
 }
