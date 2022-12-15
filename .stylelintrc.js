@@ -20,12 +20,12 @@ module.exports = {
     ],
     'string-quotes': 'single',
     'scss/no-global-function-names': null,
-    'font-family-no-duplicate-names': [
-      'always',
-      { ignoreFontFamilyNames: ['monospace'] }
-    ],
+    'font-family-no-duplicate-names': true,
     'property-no-vendor-prefix': null,
-    'color-function-notation': 0,
-    'selector-class-pattern': 0
+    'color-function-notation': null,
+    'selector-class-pattern': null,
+    'declaration-colon-newline-after': null,
+    'alpha-value-notation': null,
+    'value-list-comma-newline-after': null
   }
 };
