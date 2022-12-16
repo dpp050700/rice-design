@@ -49,7 +49,6 @@
 
   &:disabled,
   &.is-disabled {
-    color: $font-color;
     color: mix($font-color, $white, 40%);
     background-color: mix($background-color, $white);
     border-color: mix($border-color, $white);
@@ -73,6 +72,17 @@
   &:focus {
     color: $font-color-hover;
   }
+
+  &:disabled,
+  &.is-disabled {
+    color: mix($font-color, $white, 40%);
+    background-color: transparent;
+    border-color: transparent;
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
 }
 
 @mixin tag-size(
@@ -86,11 +96,7 @@
   border-radius: $tag-border-radius;
 }
 
-@mixin tag-style(
-  $font-color,
-  $border-color,
-  $background-color,
-) {
+@mixin tag-style($font-color, $border-color, $background-color) {
   color: $font-color;
   background-color: $background-color;
   border-color: $border-color;

@@ -14,6 +14,7 @@ const ButtonDemo = () => {
       <div>
         <h1>type</h1>
         <Button type="default">default</Button>
+        <Button type="success">success</Button>
         <Button type="primary">primary</Button>
         <Button type="danger">danger</Button>
         <Button type="warning">warning</Button>
@@ -21,6 +22,9 @@ const ButtonDemo = () => {
         <div className="space-vertical">
           <Button type="default" round={true}>
             default
+          </Button>
+          <Button type="success" round={true}>
+            success
           </Button>
           <Button type="primary" round={true}>
             primary
@@ -37,6 +41,11 @@ const ButtonDemo = () => {
         </div>
         <div className="space-vertical">
           <Button type="default" circle={true}>
+            <div style={{ width: '40px', height: '40px', lineHeight: '40px' }}>
+              按钮
+            </div>
+          </Button>
+          <Button type="success" circle={true}>
             <div style={{ width: '40px', height: '40px', lineHeight: '40px' }}>
               按钮
             </div>
@@ -68,6 +77,9 @@ const ButtonDemo = () => {
         <Button type="default" plain={true}>
           default
         </Button>
+        <Button type="success" plain={true}>
+          success
+        </Button>
         <Button type="primary" plain={true}>
           primary
         </Button>
@@ -86,6 +98,9 @@ const ButtonDemo = () => {
         <Button type="default" text={true}>
           default
         </Button>
+        <Button type="success" text={true}>
+          success
+        </Button>
         <Button type="primary" text={true}>
           primary
         </Button>
@@ -103,6 +118,9 @@ const ButtonDemo = () => {
         <h1>text & plain</h1>
         <Button type="default" text={true} plain={true}>
           default
+        </Button>
+        <Button type="success" text={true} plain={true}>
+          success
         </Button>
         <Button type="primary" text={true} plain={true}>
           primary
@@ -123,6 +141,9 @@ const ButtonDemo = () => {
           <Button type="default" text={true} disabled={true}>
             default
           </Button>
+          <Button type="success" text={true} disabled={true}>
+            success
+          </Button>
           <Button type="primary" text={true} disabled={true}>
             primary
           </Button>
@@ -139,6 +160,9 @@ const ButtonDemo = () => {
         <div className="space-vertical">
           <Button type="default" text={true} plain={true} disabled={true}>
             default
+          </Button>
+          <Button type="success" text={true} plain={true} disabled={true}>
+            success
           </Button>
           <Button type="primary" text={true} plain={true} disabled={true}>
             primary
@@ -157,6 +181,9 @@ const ButtonDemo = () => {
           <Button type="default" disabled={true}>
             default
           </Button>
+          <Button type="success" disabled={true}>
+            success
+          </Button>
           <Button type="primary" disabled={true}>
             primary
           </Button>
@@ -173,6 +200,9 @@ const ButtonDemo = () => {
         <div className="space-vertical">
           <Button type="default" disabled={true} plain={true}>
             default
+          </Button>
+          <Button type="success" disabled={true} plain={true}>
+            success
           </Button>
           <Button type="primary" disabled={true} plain={true}>
             primary

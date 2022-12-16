@@ -89,6 +89,7 @@
     $btn-border-color-hover-primary,
     $btn-background-hover-primary
   );
+
   &.is-plain {
     @include button-style(
       $btn-font-color-plain-primary,
@@ -98,10 +99,12 @@
       $btn-border-color-plain-hover-primary,
       $btn-background-plain-hover-primary
     );
+
     &.is-text {
       @include button-text($font-color-default, $primary);
     }
   }
+
   &.is-text {
     @include button-text(
       $btn-font-color-text-primary,
@@ -119,6 +122,7 @@
     $btn-border-color-hover-success,
     $btn-background-hover-success
   );
+
   &.is-plain {
     @include button-style(
       $btn-font-color-plain-success,
@@ -128,10 +132,12 @@
       $btn-border-color-plain-hover-success,
       $btn-background-plain-hover-success
     );
+
     &.is-text {
       @include button-text($font-color-default, $success);
     }
   }
+
   &.is-text {
     @include button-text(
       $btn-font-color-text-success,
@@ -149,6 +155,7 @@
     $btn-border-color-hover-warning,
     $btn-background-hover-warning
   );
+
   &.is-plain {
     @include button-style(
       $btn-font-color-plain-warning,
@@ -158,10 +165,12 @@
       $btn-border-color-plain-hover-warning,
       $btn-background-plain-hover-warning
     );
+
     &.is-text {
       @include button-text($font-color-default, $warning);
     }
   }
+
   &.is-text {
     @include button-text(
       $btn-font-color-text-warning,
@@ -179,6 +188,7 @@
     $btn-border-color-hover-danger,
     $btn-background-hover-danger
   );
+
   &.is-plain {
     @include button-style(
       $btn-font-color-plain-danger,
@@ -188,10 +198,12 @@
       $btn-border-color-plain-hover-danger,
       $btn-background-plain-hover-danger
     );
+
     &.is-text {
       @include button-text($font-color-default, $danger);
     }
   }
+
   &.is-text {
     @include button-text(
       $btn-font-color-text-danger,
@@ -209,6 +221,7 @@
     $btn-border-color-hover-info,
     $btn-background-hover-info
   );
+
   &.is-plain {
     @include button-style(
       $btn-font-color-plain-info,
@@ -223,6 +236,7 @@
       @include button-text($font-color-default, $info);
     }
   }
+
   &.is-text {
     @include button-text(
       $btn-font-color-text-info,

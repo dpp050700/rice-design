@@ -3,7 +3,13 @@ import classnames from 'classnames';
 
 export type ButtonSize = 'large' | 'medium' | 'small' | 'default';
 
-export type ButtonType = 'primary' | 'default' | 'danger' | 'warning' | 'info';
+export type ButtonType =
+  | 'primary'
+  | 'default'
+  | 'danger'
+  | 'warning'
+  | 'info'
+  | 'success';
 
 type NativeButtonProps = React.ButtonHTMLAttributes<HTMLElement>;
 
