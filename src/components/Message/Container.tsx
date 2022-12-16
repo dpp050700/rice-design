@@ -1,22 +1,20 @@
 import React, { useState } from 'react';
-import MessageItem from './messageItem';
+import Message from './Message';
+import { MessageProps } from './interface';
 
-interface MessageListRef {
+export interface ContainerRef {
   open: (config: OpenConfig) => void;
 }
 
-interface MessageListProps {
-  className?: string;
+interface MessageContainerProps {
+  top?: number;
+  duration?: number;
 }
 
-export interface OpenConfig {
-  content: string;
-  key?: React.Key;
-}
+export type OpenConfig = MessageProps;
 
-const MessageList = React.forwardRef<MessageListRef, MessageListProps>(
+const MessageContainer = React.forwardRef<ContainerRef, MessageContainerProps>(
   (props, ref) => {
-    const { className } = props;
     const [list, setList] = useState<OpenConfig[]>([]);
 
     const onCloseItem = (key: React.Key) => {
@@ -42,8 +40,8 @@ const MessageList = React.forwardRef<MessageListRef, MessageListProps>(
       <div className="message">
         {list.map((item, index) => {
           return (
-            <MessageItem
-              content={item.content}
+            <Message
+              {...item}
               key={item.key}
               onClose={onCloseItem}
               eventKey={item.key!}
@@ -55,6 +53,6 @@ const MessageList = React.forwardRef<MessageListRef, MessageListProps>(
   }
 );
 
-MessageList.displayName = 'MessageList';
+MessageContainer.displayName = 'MessageContainer';
 
-export default MessageList;
+export default MessageContainer;
