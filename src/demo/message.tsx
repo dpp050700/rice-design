@@ -53,6 +53,22 @@ const MessageDemo = () => {
         >
           Info
         </Button>
+        <Button
+          type="warning"
+          onClick={() => {
+            message.warning('这是一条警告消息');
+          }}
+        >
+          Warning
+        </Button>
+        <Button
+          type="success"
+          onClick={() => {
+            message.success('这是一条成功消息');
+          }}
+        >
+          Success
+        </Button>
       </div>
     </div>
   );

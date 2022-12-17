@@ -1,4 +1,5 @@
 import React from 'react';
+import classnames from 'classnames';
 import { MessageProps, MessageType } from './interface';
 
 interface MessageItemProps extends Omit<MessageProps, 'onClose'> {
@@ -15,7 +16,8 @@ const IconMap: Record<MessageType, React.ReactElement> = {
 };
 
 const MessageItem: React.FC<MessageItemProps> = (props) => {
-  const { content, duration, eventKey, showIcon, icon, type, onClose } = props;
+  const { content, duration, eventKey, showIcon, icon, type, effect, onClose } =
+    props;
 
   React.useEffect(() => {
     if (duration! > 0) {
@@ -30,7 +32,6 @@ const MessageItem: React.FC<MessageItemProps> = (props) => {
   }, [duration]);
 
   const MessageIcon = () => {
-    console.log(type);
     if (!showIcon) {
       return null;
     }
@@ -40,10 +41,19 @@ const MessageItem: React.FC<MessageItemProps> = (props) => {
     return <>{icon}</>;
   };
 
+  const messageCls = classnames('message-content', {
+    [`message--${effect}`]: effect,
+    [`message--${type}`]: type
+  });
+
   return (
-    <div className="message-content">
+    <div className={messageCls}>
       <div className="message-content__inner">
-        <MessageIcon />
+        {showIcon && (
+          <span className="message-icon">
+            <MessageIcon />
+          </span>
+        )}
         {content}
       </div>
     </div>
@@ -51,8 +61,9 @@ const MessageItem: React.FC<MessageItemProps> = (props) => {
 };
 
 MessageItem.defaultProps = {
-  duration: 4.5,
-  showIcon: true
+  duration: 3,
+  showIcon: true,
+  effect: 'light'
 };
 
 export default MessageItem;

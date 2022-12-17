@@ -12,15 +12,191 @@
   .message-content {
     padding: 8px;
     text-align: center;
-  }
 
-  .message-content__inner {
-    display: inline-block;
-    padding: 10px 12px;
-    color: $font-color-primary;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
-      0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    .message-content__inner {
+      display: inline-block;
+      padding: 10px 12px;
+      color: $font-color-primary;
+      pointer-events: all;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08),
+        0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .message-icon {
+      margin-right: 8px;
+    }
+
+    &.message--plain {
+      &.message--success {
+        .message-content__inner {
+          color: $message-font-color-plain-success;
+          background: $message-background-plain-success;
+        }
+
+        .message-icon {
+          color: $message-icon-color-plain-success;
+        }
+      }
+
+      &.message--error {
+        .message-content__inner {
+          color: $message-font-color-plain-error;
+          background: $message-background-plain-error;
+        }
+
+        .message-icon {
+          color: $message-icon-color-plain-error;
+        }
+      }
+
+      &.message--info {
+        .message-content__inner {
+          color: $message-font-color-plain-info;
+          background: $message-background-plain-info;
+        }
+
+        .message-icon {
+          color: $message-icon-color-plain-info;
+        }
+      }
+
+      &.message--warning {
+        .message-content__inner {
+          color: $message-font-color-plain-warning;
+          background: $message-background-plain-warning;
+        }
+
+        .message-icon {
+          color: $message-icon-color-plain-warning;
+        }
+      }
+
+      &.message--loading {
+        .message-content__inner {
+          color: $message-font-color-plain-loading;
+          background: $message-background-plain-loading;
+        }
+
+        .message-icon {
+          color: $message-icon-color-plain-loading;
+        }
+      }
+    }
+
+    &.message--light {
+      &.message--success {
+        .message-content__inner {
+          color: $message-font-color-light-success;
+          background: $message-background-light-success;
+        }
+
+        .message-icon {
+          color: $message-icon-color-light-success;
+        }
+      }
+
+      &.message--error {
+        .message-content__inner {
+          color: $message-font-color-light-error;
+          background: $message-background-light-error;
+        }
+
+        .message-icon {
+          color: $message-icon-color-light-error;
+        }
+      }
+
+      &.message--info {
+        .message-content__inner {
+          color: $message-font-color-light-info;
+          background: $message-background-light-info;
+        }
+
+        .message-icon {
+          color: $message-icon-color-light-info;
+        }
+      }
+
+      &.message--warning {
+        .message-content__inner {
+          color: $message-font-color-light-warning;
+          background: $message-background-light-warning;
+        }
+
+        .message-icon {
+          color: $message-icon-color-light-warning;
+        }
+      }
+
+      &.message--loading {
+        .message-content__inner {
+          color: $message-font-color-light-loading;
+          background: $message-background-light-loading;
+        }
+
+        .message-icon {
+          color: $message-icon-color-light-loading;
+        }
+      }
+    }
+
+    &.message--dark {
+      &.message--success {
+        .message-content__inner {
+          color: $message-font-color-dark-success;
+          background: $message-background-dark-success;
+        }
+
+        .message-icon {
+          color: $message-icon-color-dark-success;
+        }
+      }
+
+      &.message--error {
+        .message-content__inner {
+          color: $message-font-color-dark-error;
+          background: $message-background-dark-error;
+        }
+
+        .message-icon {
+          color: $message-icon-color-dark-error;
+        }
+      }
+
+      &.message--info {
+        .message-content__inner {
+          color: $message-font-color-dark-info;
+          background: $message-background-dark-info;
+        }
+
+        .message-icon {
+          color: $message-icon-color-dark-info;
+        }
+      }
+
+      &.message--warning {
+        .message-content__inner {
+          color: $message-font-color-dark-warning;
+          background: $message-background-dark-warning;
+        }
+
+        .message-icon {
+          color: $message-icon-color-dark-warning;
+        }
+      }
+
+      &.message--loading {
+        .message-content__inner {
+          color: $message-font-color-dark-loading;
+          background: $message-background-dark-loading;
+        }
+
+        .message-icon {
+          color: $message-icon-color-dark-loading;
+        }
+      }
+    }
   }
 }

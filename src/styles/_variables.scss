@@ -464,3 +464,64 @@ $alert-background-plain-error: $danger-light-9;
 $alert-font-color-plain-info: $info;
 $alert-border-color-plain-info: $info-light-6;
 $alert-background-plain-info: $info-light-9;
+
+/** message */
+$message-font-color-dark-success: $white;
+$message-icon-color-dark-success: $white;
+$message-background-dark-success: $success;
+
+$message-font-color-dark-warning: $white;
+$message-icon-color-dark-warning: $white;
+$message-background-dark-warning: $warning;
+
+$message-font-color-dark-error: $white;
+$message-icon-color-dark-error: $white;
+$message-background-dark-error: $danger;
+
+$message-font-color-dark-info: $white;
+$message-icon-color-dark-info: $white;
+$message-background-dark-info: $info;
+
+$message-font-color-dark-loading: $white;
+$message-icon-color-dark-loading: $white;
+$message-background-dark-loading: $primary;
+
+$message-font-color-light-success: $success;
+$message-icon-color-light-success: $success;
+$message-background-light-success: $success-light-9;
+
+$message-font-color-light-warning: $warning;
+$message-icon-color-light-warning: $warning;
+$message-background-light-warning: $warning-light-9;
+
+$message-font-color-light-error: $danger;
+$message-icon-color-light-error: $danger;
+$message-background-light-error: $danger-light-9;
+
+$message-font-color-light-info: $info;
+$message-icon-color-light-info: $info;
+$message-background-light-info: $info-light-9;
+
+$message-font-color-light-loading: $primary;
+$message-icon-color-light-loading: $primary;
+$message-background-light-loading: $primary-light-9;
+
+$message-font-color-plain-success: $font-color-primary;
+$message-icon-color-plain-success: $success;
+$message-background-plain-success: $white;
+
+$message-font-color-plain-warning: $font-color-primary;
+$message-icon-color-plain-warning: $warning;
+$message-background-plain-warning: $white;
+
+$message-font-color-plain-error: $font-color-primary;
+$message-icon-color-plain-error: $danger;
+$message-background-plain-error: $white;
+
+$message-font-color-plain-info: $font-color-primary;
+$message-icon-color-plain-info: $info;
+$message-background-plain-info: $white;
+
+$message-font-color-plain-loading: $font-color-primary;
+$message-icon-color-plain-loading: $primary;
+$message-background-plain-loading: $white;
