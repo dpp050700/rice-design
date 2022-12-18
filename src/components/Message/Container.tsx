@@ -18,6 +18,8 @@ const MessageContainer = React.forwardRef<ContainerRef, MessageContainerProps>(
     const [list, setList] = useState<OpenConfig[]>([]);
 
     const onCloseItem = (key: React.Key) => {
+      const itemConfig = list.find((item) => item.key === key);
+      itemConfig?.onClose?.();
       setList((prevState) => {
         return prevState.filter((item) => item.key !== key);
       });

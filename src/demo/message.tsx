@@ -20,7 +20,10 @@ const MessageDemo = () => {
           onClick={() => {
             message.open({
               content: '这是一条消息提醒 2s 消失',
-              duration: 2
+              duration: 2,
+              onClose() {
+                console.log('消息已关闭');
+              }
             });
           }}
         >
