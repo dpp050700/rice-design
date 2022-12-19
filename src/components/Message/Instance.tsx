@@ -5,6 +5,8 @@ import { MessageProps } from './interface';
 
 export interface MessageInstance {
   open: (config: MessageProps) => void;
+  close: (key: MessageProps['key']) => void;
+  destroy: () => void;
 }
 
 let messageKeyIndex = 0;
@@ -27,6 +29,12 @@ const Instance = React.forwardRef<InstanceRef>((props, ref) => {
             resultKey = `message-${messageKeyIndex}`;
           }
           containerRef.current?.open({ key: resultKey, ...originConfig });
+        },
+        close: (key: MessageProps['key']) => {
+          containerRef.current?.close(key);
+        },
+        destroy: () => {
+          containerRef.current?.destroy();
         }
       }
     };

@@ -24,7 +24,11 @@ type OpenMessage<T> = (
   onClose?: MessageProps['onClose']
 ) => void;
 
-interface MessageMethods {
+interface BasicMessageMethods {
+  destroy: (key?: MessageProps['key']) => void;
+}
+
+interface TypeMessageMethods {
   open: OpenMessage<MessageProps>;
   success: OpenMessage<MessageTypeProps>;
   info: OpenMessage<MessageTypeProps>;
@@ -32,6 +36,8 @@ interface MessageMethods {
   warning: OpenMessage<MessageTypeProps>;
   loading: OpenMessage<MessageTypeProps>;
 }
+
+type MessageMethods = BasicMessageMethods & TypeMessageMethods;
 
 let globalMessage: GlobalMessage | null = null;
 
@@ -114,7 +120,15 @@ const openTypeMessage: OpenMessage<MessageTypeProps> = (
 };
 
 const messageMethods: MessageMethods = {
-  open: openMessage
+  open: openMessage,
+  destroy: (key?) => {
+    if (!globalMessage) return;
+    if (!key) {
+      globalMessage.instance?.destroy();
+      return;
+    }
+    globalMessage.instance?.close(key);
+  }
 } as MessageMethods;
 
 messageType.forEach((item) => {

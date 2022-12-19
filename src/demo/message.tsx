@@ -73,6 +73,23 @@ const MessageDemo = () => {
           Success
         </Button>
       </div>
+      <div>
+        <p>手动关闭</p>
+        <Button
+          type="success"
+          onClick={() => {
+            message.success({
+              content: '这是一条成功消息',
+              duration: 2,
+              key: 'close'
+            });
+          }}
+        >
+          手动关闭
+        </Button>
+        <Button onClick={() => message.destroy('close')}>关闭</Button>
+        <Button onClick={() => message.destroy()}>关闭所有</Button>
+      </div>
     </div>
   );
 };

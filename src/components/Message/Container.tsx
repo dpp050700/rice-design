@@ -4,6 +4,8 @@ import { MessageProps } from './interface';
 
 export interface ContainerRef {
   open: (config: OpenConfig) => void;
+  close: (key: MessageProps['key']) => void;
+  destroy: () => void;
 }
 
 interface MessageContainerProps {
@@ -17,7 +19,7 @@ const MessageContainer = React.forwardRef<ContainerRef, MessageContainerProps>(
   (props, ref) => {
     const [list, setList] = useState<OpenConfig[]>([]);
 
-    const onCloseItem = (key: React.Key) => {
+    const onCloseItem = (key: MessageProps['key']) => {
       const itemConfig = list.find((item) => item.key === key);
       itemConfig?.onClose?.();
       setList((prevState) => {
@@ -29,11 +31,22 @@ const MessageContainer = React.forwardRef<ContainerRef, MessageContainerProps>(
       return {
         open: (config: OpenConfig) => {
           setList((prevState) => {
-            const clone = [...prevState];
-            clone.push(config);
-
-            return clone;
+            const findItem = prevState.findIndex(
+              (item) => item.key === config.key
+            );
+            if (findItem > -1) {
+              const clone = [...prevState];
+              clone[findItem] = config;
+              return clone;
+            }
+            return [...prevState, config];
           });
+        },
+        close: (key: MessageProps['key']) => {
+          onCloseItem(key);
+        },
+        destroy: () => {
+          setList([]);
         }
       };
     });
