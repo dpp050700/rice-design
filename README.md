@@ -7,7 +7,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Tag
 - Alert
 - Message 
-- Notification
+- Notifications
 - Dialog
 - Spin
 - Avatar

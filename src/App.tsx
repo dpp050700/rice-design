@@ -4,13 +4,15 @@ import TagDemo from './demo/tag';
 import IconDemo from './demo/icon';
 import MessageDemo from './demo/message';
 import AlertDemo from './demo/alert';
+import NotificationDemo from './demo/notification';
 
 const demo: any = {
   ButtonDemo,
   IconDemo,
   TagDemo,
   AlertDemo,
-  MessageDemo
+  MessageDemo,
+  NotificationDemo
 };
 
 function App() {
