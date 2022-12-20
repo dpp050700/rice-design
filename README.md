@@ -6,9 +6,18 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Button
 - Tag
 - Alert
-- Menu
+- Message 
+- Notification
+- Dialog
+- Spin
+- Avatar
+- Result
+- Pagination
+- Breadcrumb
+- Affix
+- Empty
+- Skeleton
 - Upload
-- Form
 - Input
 - Select
 - Checkbox
@@ -16,22 +25,16 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Switch
 - Slider
 - Rate
-- Dialog
-- Index
-- Result
-- Pagination
+- Form
 - Steps
-- Notification
 - Progress
-- Skeleton
-- Spin
-- Affix
-- Breadcrumb
-- Avatar
-- Empty
+- Index
+- Menu
 - Emoji
+- CountDown
 
 
 电商专区
 - SKU
 - Address
+- GoodsCard
