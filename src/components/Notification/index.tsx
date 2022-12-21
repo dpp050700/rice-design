@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { OpenConfig, NotificationType } from './interface';
+import NotificationUI from './NotificationUI';
 
 import { useNotify } from '../hooks/useNotity';
 import type {
@@ -8,6 +9,8 @@ import type {
   NotifyKey,
   NotifyAPI
 } from '../hooks/useNotity';
+
+const PREFIX_CLS = 'rice-notification';
 
 type Task =
   | { type: 'open'; config: NotifyOpenConfig }
@@ -36,7 +39,7 @@ let task: Task;
 let notification: GlobalNotification | null = null;
 
 const GlobalWrapper = React.forwardRef<GlobalWrapper>((props, ref) => {
-  const [apis, wrapper] = useNotify();
+  const [apis, wrapper] = useNotify({ prefixCls: PREFIX_CLS });
   React.useImperativeHandle(ref, () => {
     return {
       instance: apis
@@ -46,13 +49,26 @@ const GlobalWrapper = React.forwardRef<GlobalWrapper>((props, ref) => {
 });
 GlobalWrapper.displayName = 'GlobalWrapper';
 
-function createOpenTask(config: NotifyOpenConfig): Task {
-  const { content: originContent, key: originKey, ...restConfig } = config;
-  const content = <div>{originContent}</div>;
-  let key: NotifyKey = originKey;
+function createOpenTask(config: OpenConfig): Task {
+  const {
+    content: originContent,
+    key: originKey,
+    title,
+    ...restConfig
+  } = config;
+  const content = (
+    <NotificationUI
+      title={title}
+      description={originContent}
+      prefixCls={PREFIX_CLS}
+    />
+  );
+  let key: NotifyKey;
   if (originKey === null || originKey === undefined) {
     key = `notification-${indexKey}`;
     indexKey++;
+  } else {
+    key = originKey;
   }
   return {
     type: 'open',

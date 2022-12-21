@@ -73,6 +73,8 @@ const NotifyWrapper = React.forwardRef<NotifyAPI, NotifyWrapperProps>(
                     content={notify.content}
                     eventKey={notify.key}
                     key={notify.key}
+                    prefixCls={prefixCls}
+                    closeNotify={closeNotify}
                   />
                 );
               })}

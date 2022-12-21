@@ -10,7 +10,10 @@ const NotificationDemo = () => {
         <Button
           type="primary"
           onClick={() => {
-            notification.open({ content: '这是一条消息提醒', key: '11' });
+            notification.open({
+              content: '这是一条消息提醒',
+              title: '消息提醒'
+            });
           }}
         >
           普通使用

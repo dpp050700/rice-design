@@ -4,7 +4,12 @@ import NotifyWrapper from './NotifyWrapper';
 
 type WrapperRef = NotifyAPI;
 
-function useNotify(): [NotifyAPI, React.ReactElement] {
+interface NotifyConfig {
+  prefixCls?: string;
+}
+
+function useNotify(rootConfig?: NotifyConfig): [NotifyAPI, React.ReactElement] {
+  const { prefixCls } = rootConfig || {};
   const notifyApi: NotifyAPI = {
     open(config) {
       wrapperRef.current?.open(config);
@@ -19,7 +24,7 @@ function useNotify(): [NotifyAPI, React.ReactElement] {
 
   const wrapperRef = React.useRef<WrapperRef>(null);
 
-  const wrapper = <NotifyWrapper ref={wrapperRef} />;
+  const wrapper = <NotifyWrapper ref={wrapperRef} prefixCls={prefixCls} />;
 
   return [notifyApi, wrapper];
 }
