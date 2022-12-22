@@ -16,10 +16,35 @@ export interface NotifyAPI {
   destroy: () => void;
 }
 
+export interface NotifyWrapperProps {
+  className?: string;
+  prefixCls?: string;
+  container?: HTMLElement;
+  maxCount?: number;
+}
+
+export interface NotifyConfig {
+  prefixCls?: string;
+  closeable?: boolean;
+  closeIcon?: React.ReactNode;
+  maxCount?: number;
+  duration?: number;
+}
+
 export interface NotifyOpenConfig {
   key: NotifyKey;
   duration?: number;
   content: React.ReactNode;
   onClose?: () => void;
   placement?: Placement;
+}
+
+export interface NotifyProps {
+  prefixCls?: string;
+  content: React.ReactNode;
+  duration?: number;
+  closeNotify?: (key: NotifyKey) => void;
+  eventKey: NotifyKey;
+  closeable?: boolean;
+  closeIcon?: React.ReactNode;
 }

@@ -1,16 +1,6 @@
 import React from 'react';
-import { NotifyKey } from './interface';
+import { NotifyProps } from './interface';
 import classnames from 'classnames';
-
-interface NotifyProps {
-  prefixCls?: string;
-  content: React.ReactNode;
-  duration?: number;
-  closeNotify?: (key: NotifyKey) => void;
-  eventKey: NotifyKey;
-  closeable?: boolean;
-  closeIcon?: React.ReactNode;
-}
 
 const Notify: React.FC<NotifyProps> = (props) => {
   const {

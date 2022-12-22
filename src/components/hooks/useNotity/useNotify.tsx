@@ -1,12 +1,8 @@
 import React from 'react';
-import { NotifyAPI } from './interface';
+import { NotifyAPI, NotifyConfig } from './interface';
 import NotifyWrapper from './NotifyWrapper';
 
 type WrapperRef = NotifyAPI;
-
-interface NotifyConfig {
-  prefixCls?: string;
-}
 
 function useNotify(rootConfig?: NotifyConfig): [NotifyAPI, React.ReactElement] {
   const { prefixCls } = rootConfig || {};

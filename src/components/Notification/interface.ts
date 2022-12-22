@@ -1,5 +1,6 @@
-import { NotifyKey, NotifyOpenConfig, Placement } from '../hooks/useNotity';
 import React from 'react';
+
+import { NotifyKey, NotifyOpenConfig, Placement } from '../hooks/useNotity';
 
 export type NotificationType = 'success' | 'error' | 'info' | 'warning';
 

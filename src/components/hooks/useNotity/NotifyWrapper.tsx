@@ -2,12 +2,13 @@ import React from 'react';
 import { createPortal } from 'react-dom';
 import classnames from 'classnames';
 import Notify from './Notify';
-import { NotifyAPI, NotifyKey, NotifyOpenConfig, Placement } from './interface';
-
-interface NotifyWrapperProps {
-  className?: string;
-  prefixCls?: string;
-}
+import {
+  NotifyAPI,
+  NotifyKey,
+  NotifyOpenConfig,
+  NotifyWrapperProps,
+  Placement
+} from './interface';
 
 type Placements = Partial<Record<Placement, NotifyOpenConfig[]>>;
 
@@ -75,6 +76,7 @@ const NotifyWrapper = React.forwardRef<NotifyAPI, NotifyWrapperProps>(
                     key={notify.key}
                     prefixCls={prefixCls}
                     closeNotify={closeNotify}
+                    duration={notify.duration}
                   />
                 );
               })}

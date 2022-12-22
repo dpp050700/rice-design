@@ -1,16 +1,13 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import { OpenConfig, NotificationType } from './interface';
-import NotificationUI from './NotificationUI';
+import useNotification from './useNotification';
 
-import { useNotify } from '../hooks/useNotity';
 import type {
   NotifyOpenConfig,
   NotifyKey,
   NotifyAPI
 } from '../hooks/useNotity';
-
-const PREFIX_CLS = 'rice-notification';
 
 type Task =
   | { type: 'open'; config: NotifyOpenConfig }
@@ -32,17 +29,15 @@ const notificationsTypes: NotificationType[] = [
   'warning'
 ];
 
-let indexKey = 0;
-
 let task: Task;
 
 let notification: GlobalNotification | null = null;
 
 const GlobalWrapper = React.forwardRef<GlobalWrapper>((props, ref) => {
-  const [apis, wrapper] = useNotify({ prefixCls: PREFIX_CLS });
+  const [apis, wrapper] = useNotification();
   React.useImperativeHandle(ref, () => {
     return {
-      instance: apis
+      instance: apis as any
     };
   });
   return <>{wrapper}</>;
@@ -50,34 +45,10 @@ const GlobalWrapper = React.forwardRef<GlobalWrapper>((props, ref) => {
 GlobalWrapper.displayName = 'GlobalWrapper';
 
 function createOpenTask(config: OpenConfig): Task {
-  const {
-    content: originContent,
-    key: originKey,
-    title,
-    ...restConfig
-  } = config;
-  const content = (
-    <NotificationUI
-      title={title}
-      description={originContent}
-      prefixCls={PREFIX_CLS}
-    />
-  );
-  let key: NotifyKey;
-  if (originKey === null || originKey === undefined) {
-    key = `notification-${indexKey}`;
-    indexKey++;
-  } else {
-    key = originKey;
-  }
   return {
     type: 'open',
-    config: {
-      content,
-      key,
-      ...restConfig
-    }
-  };
+    config
+  } as Task;
 }
 
 function createDestroyTask(key: NotifyKey): Task {
@@ -136,6 +107,7 @@ function destroy(key: NotifyKey) {
 interface BasicStaticMethods {
   open: (config: OpenConfig) => void;
   destroy: (key: NotifyKey) => void;
+  useNotification: typeof useNotification;
 }
 
 type StaticMethods = BasicStaticMethods &
@@ -143,7 +115,8 @@ type StaticMethods = BasicStaticMethods &
 
 const basicStaticMethods: BasicStaticMethods = {
   open,
-  destroy
+  destroy,
+  useNotification
 };
 
 const staticMethods: StaticMethods = { ...basicStaticMethods } as StaticMethods;
