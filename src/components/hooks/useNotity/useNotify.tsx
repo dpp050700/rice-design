@@ -1,10 +1,12 @@
 import React from 'react';
-import { NotifyAPI, NotifyConfig } from './interface';
+import { NotifyAPI, UseNotifyConfig } from './interface';
 import NotifyWrapper from './NotifyWrapper';
 
 type WrapperRef = NotifyAPI;
 
-function useNotify(rootConfig?: NotifyConfig): [NotifyAPI, React.ReactElement] {
+function useNotify(
+  rootConfig?: UseNotifyConfig
+): [NotifyAPI, React.ReactElement] {
   const { prefixCls } = rootConfig || {};
   const notifyApi: NotifyAPI = {
     open(config) {

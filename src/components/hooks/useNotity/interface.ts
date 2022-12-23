@@ -23,28 +23,30 @@ export interface NotifyWrapperProps {
   maxCount?: number;
 }
 
+export interface NotifyOpenConfig extends NotifyConfig {
+  key: NotifyKey;
+  placement?: Placement;
+}
+
 export interface NotifyConfig {
+  content: React.ReactNode;
+  duration?: number;
+  closeable?: boolean;
+  closeIcon?: React.ReactNode;
+  onClose?: () => void;
+}
+
+export interface NotifyProps extends Omit<NotifyConfig, 'onClose'> {
   prefixCls?: string;
+  closeNotify?: (key: NotifyKey) => void;
+  eventKey: NotifyKey;
+}
+
+export interface UseNotifyConfig {
+  prefixCls?: string;
+  container?: HTMLElement;
   closeable?: boolean;
   closeIcon?: React.ReactNode;
   maxCount?: number;
   duration?: number;
-}
-
-export interface NotifyOpenConfig {
-  key: NotifyKey;
-  duration?: number;
-  content: React.ReactNode;
-  onClose?: () => void;
-  placement?: Placement;
-}
-
-export interface NotifyProps {
-  prefixCls?: string;
-  content: React.ReactNode;
-  duration?: number;
-  closeNotify?: (key: NotifyKey) => void;
-  eventKey: NotifyKey;
-  closeable?: boolean;
-  closeIcon?: React.ReactNode;
 }

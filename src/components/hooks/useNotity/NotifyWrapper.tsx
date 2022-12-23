@@ -14,7 +14,7 @@ type Placements = Partial<Record<Placement, NotifyOpenConfig[]>>;
 
 const NotifyWrapper = React.forwardRef<NotifyAPI, NotifyWrapperProps>(
   (props, ref) => {
-    const { className, prefixCls } = props;
+    const { className, prefixCls, maxCount, container = document.body } = props;
 
     const [notifyList, setNotifyList] = React.useState<NotifyOpenConfig[]>([]);
     const [placementsMap, setPlacementMap] = React.useState<Placements>({});
@@ -84,7 +84,7 @@ const NotifyWrapper = React.forwardRef<NotifyAPI, NotifyWrapperProps>(
           );
         })}
       </>,
-      document.body
+      container
     );
   }
 );
