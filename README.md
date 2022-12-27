@@ -1,7 +1,5 @@
 # React 组件库
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
 ## Components
 - Button
 - Tag
@@ -32,6 +30,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Menu
 - Emoji
 - CountDown
+- Table
 
 
 电商专区
